@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44214946, g: 0.49115384, b: 0.57105917, a: 1}
+  m_IndirectSpecularColor: {r: 0.449628, g: 0.49969918, b: 0.5756562, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -556,7 +556,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 268593463}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e26ceb4a63ae26f4cb0be26cbd4df169, type: 3}
+  m_Script: {fileID: 11500000, guid: e68eb96fb16f2d34ba8fb590454dc218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 1
@@ -787,7 +787,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 542656811}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e26ceb4a63ae26f4cb0be26cbd4df169, type: 3}
+  m_Script: {fileID: 11500000, guid: e68eb96fb16f2d34ba8fb590454dc218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 2
@@ -1152,13 +1152,13 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
-    m_Resolution: -1
+    m_Type: 2
+    m_Resolution: 3
     m_CustomResolution: -1
-    m_Strength: 0.5
+    m_Strength: 0.29
     m_Bias: 0
     m_NormalBias: 0
-    m_NearPlane: 0.099999994
+    m_NearPlane: 0.1
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
@@ -1168,7 +1168,7 @@ Light:
     m_Bits: 4294967295
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 2
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -1179,13 +1179,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 835821466}
-  m_LocalRotation: {x: 0.5007939, y: -0.2213166, z: 0.1341873, w: 0.82596505}
+  m_LocalRotation: {x: 0.9068137, y: -0.08915176, z: 0.24297994, w: 0.3327188}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 62.458004, y: -30.000002, z: 0}
+  m_LocalEulerAnglesHint: {x: 139.703, y: -30, z: -0.000015258789}
 --- !u!1 &873310565
 GameObject:
   m_ObjectHideFlags: 0
@@ -1372,7 +1372,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1016685287}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e26ceb4a63ae26f4cb0be26cbd4df169, type: 3}
+  m_Script: {fileID: 11500000, guid: e68eb96fb16f2d34ba8fb590454dc218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 4
@@ -1559,7 +1559,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1106945535}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 255, y: 159.5, z: 0}
+  m_LocalPosition: {x: 512, y: 384, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2115803059}
@@ -2015,7 +2015,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1998224153}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e26ceb4a63ae26f4cb0be26cbd4df169, type: 3}
+  m_Script: {fileID: 11500000, guid: e68eb96fb16f2d34ba8fb590454dc218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 3
@@ -2098,7 +2098,7 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
+  m_HDR: 0
   m_AllowMSAA: 1
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -2238,7 +2238,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2115803058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -155.3, y: 129.6, z: 0}
+  m_LocalPosition: {x: -412.3, y: 354.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1106945539}

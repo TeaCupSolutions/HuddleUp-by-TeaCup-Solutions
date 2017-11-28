@@ -1,19 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class ScoreController : MonoBehaviour {
-    public Text scoreText;
+    public Color active;
+    public Color notActive;
     public int playerIndex;
-    public GameObject[] players;
+    private GameObject[] players;
     public Player playerStats;
-    // Use this for initialization
+
     void Start () {
         players = GameObject.FindGameObjectsWithTag("Player");
     }
 	
-	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
@@ -36,6 +33,20 @@ public class ScoreController : MonoBehaviour {
             Debug.Log("right key was pressed player 4 set");
         }
 
+        //fix update to only do it if changed later
+        foreach (GameObject player in players)
+        {
+            playerStats = player.GetComponent<Player>();
+            if (playerStats.playerNum == playerIndex)
+            {
+                playerStats.UIText.color = this.active;
+            }
+            else
+            {
+                playerStats.UIText.color = this.notActive;
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.W))
         {
             foreach (GameObject player in players) {
@@ -46,9 +57,7 @@ public class ScoreController : MonoBehaviour {
                     Debug.Log("player " + playerIndex + "Communication is " + playerStats.leadership);
                 }
             }
-            Debug.Log("w key was pressed");
         }
-        
         else if (Input.GetKeyDown(KeyCode.D))
         {
             foreach (GameObject player in players) {
@@ -59,7 +68,6 @@ public class ScoreController : MonoBehaviour {
                     Debug.Log("player " + playerIndex + "Destructiveness is " + playerStats.leadership);
                 }
             }
-            Debug.Log("d key was pressed");
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
@@ -72,7 +80,6 @@ public class ScoreController : MonoBehaviour {
                     Debug.Log("player " + playerIndex + "Leadership is " + playerStats.leadership);
                 }
             }
-            Debug.Log("s key was pressed");
         }
         else if (Input.GetKeyDown(KeyCode.A))
         {
@@ -85,18 +92,6 @@ public class ScoreController : MonoBehaviour {
                     Debug.Log("player " + playerIndex + "Creativity is " + playerStats.leadership);
                 }
             }
-            Debug.Log("a key was pressed");
         }
-        scoreText.text = "";
-        foreach (GameObject player in players)
-        {
-            playerStats = player.GetComponent<Player>();
-            scoreText.text += ("Player " + playerStats.playerNum + "\n ");
-            scoreText.text += ("Leadership: " + playerStats.leadership + "\n ");
-            scoreText.text += ("Comminication: " + playerStats.communication + "\n ");
-            scoreText.text += ("Creativity: " + playerStats.creativity + "\n ");
-            scoreText.text += ("Destructiveness: " + playerStats.destructiveness + "\n ");
-        }
-        scoreText.text += ("Currenly Selected: " + playerIndex + "\n ");
     }
 }

@@ -1,36 +1,22 @@
 fileFormatVersion: 2
-guid: 708c63ff57382b34e912141760b0d63e
-timeCreated: 1512383193
+guid: 837f1efacc721294abfedd6e272c02b2
+timeCreated: 1512411052
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Box002
-    100002: Box003
-    100004: //RootNode
-    400000: Box002
-    400002: Box003
-    400004: //RootNode
-    2300000: Box002
-    2300002: Box003
-    3300000: Box002
-    3300002: Box003
-    4300000: Box002
-    4300002: Box003
-    6400000: Box002
-    6400002: Box003
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Box001
     9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 'Material #1'
-    second: {fileID: 2100000, guid: b63c8e5c065994548b97445f6472f81a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 'Material #2'
-    second: {fileID: 2100000, guid: f9b34b65510734f4cba1f7cb0cc46819, type: 2}
+      name: 'Material #0'
+    second: {fileID: 2100000, guid: f1d5170ef4616cd45be0eb63b5052ebb, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -62,7 +48,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1

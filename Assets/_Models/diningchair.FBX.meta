@@ -1,36 +1,32 @@
 fileFormatVersion: 2
-guid: 708c63ff57382b34e912141760b0d63e
-timeCreated: 1512383193
+guid: f9fc1dbce7ceb1244995ec59c7d6b1ee
+timeCreated: 1512413055
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Box002
-    100002: Box003
-    100004: //RootNode
-    400000: Box002
-    400002: Box003
-    400004: //RootNode
-    2300000: Box002
-    2300002: Box003
-    3300000: Box002
-    3300002: Box003
-    4300000: Box002
-    4300002: Box003
-    6400000: Box002
-    6400002: Box003
+    100000: cushion chair
+    100002: //RootNode
+    400000: cushion chair
+    400002: //RootNode
+    2300000: cushion chair
+    2300002: //RootNode
+    3300000: cushion chair
+    3300002: //RootNode
+    4300000: chair
+    4300002: cushion chair
     9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 'Material #1'
-    second: {fileID: 2100000, guid: b63c8e5c065994548b97445f6472f81a, type: 2}
+      name: 'Material #3'
+    second: {fileID: 2100000, guid: e0e2e805e8165f34eb0b3642cc5e46a8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 'Material #2'
-    second: {fileID: 2100000, guid: f9b34b65510734f4cba1f7cb0cc46819, type: 2}
+      name: 'Material #4'
+    second: {fileID: 2100000, guid: a1081e1ea1763a54fbdab4c41e777f54, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -62,7 +58,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1

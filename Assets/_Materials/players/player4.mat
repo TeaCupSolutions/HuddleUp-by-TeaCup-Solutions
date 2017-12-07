@@ -83,7 +83,7 @@ Material:
     - _Lightmapping: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Outline: 0.002
+    - _Outline: 0.03
     - _Parallax: 0.02
     - _Shininess: 0.41313845
     - _SmoothnessTextureChannel: 0

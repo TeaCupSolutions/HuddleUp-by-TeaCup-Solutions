@@ -5705,8 +5705,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_DampTime: 0.2
-  m_ScreenEdgeBuffer: 4
-  m_MinSize: 3
+  m_ScreenEdgeBuffer: 3
+  m_MinSize: 2
   m_Targets:
   - {fileID: 402187050}
   - {fileID: 532401908}

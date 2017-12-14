@@ -27,7 +27,7 @@ public class Player : MonoBehaviour{
         output += ("Leadership: " + this.leadership + "\n ");
         output += ("Comminication: " + this.communication + "\n ");
         output += ("Creativity: " + this.creativity + "\n ");
-        output += ("Destructiveness: " + this.destructiveness + "\n ");
+        output += ("BTC: " + this.destructiveness + "\n ");
 
         return output;
     }

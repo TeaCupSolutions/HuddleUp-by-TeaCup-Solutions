@@ -1109,6 +1109,21 @@ MeshCollider:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 837f1efacc721294abfedd6e272c02b2, type: 3}
   m_PrefabInternal: {fileID: 1482113291}
+--- !u!114 &376471479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 376471473}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ab9ca4277e97940aec21463e6035f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 3
+  interactionTransform: {fileID: 376471478}
+  objectTransform: {fileID: 376471478}
+  dropHeight: 0
 --- !u!1 &376867628
 GameObject:
   m_ObjectHideFlags: 0
@@ -2855,6 +2870,7 @@ GameObject:
   - component: {fileID: 914011674}
   - component: {fileID: 914011673}
   - component: {fileID: 914011672}
+  - component: {fileID: 914011677}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -2943,6 +2959,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &914011677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 914011671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ab9ca4277e97940aec21463e6035f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 3
+  interactionTransform: {fileID: 914011676}
+  objectTransform: {fileID: 914011676}
+  dropHeight: 2
 --- !u!1 &935216858
 GameObject:
   m_ObjectHideFlags: 0
@@ -3203,6 +3234,21 @@ MeshCollider:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 6a167bcb5e65c9241af128adb54a9f91, type: 3}
   m_PrefabInternal: {fileID: 995067794}
+--- !u!114 &995067801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 995067795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ab9ca4277e97940aec21463e6035f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 3
+  interactionTransform: {fileID: 995067800}
+  objectTransform: {fileID: 995067800}
+  dropHeight: 0.2
 --- !u!1 &1040025285
 GameObject:
   m_ObjectHideFlags: 0
@@ -4805,19 +4851,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.53267515
+      value: 0.5326752
       objectReference: {fileID: 0}
     - target: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.07034045
+      value: 0.070340455
       objectReference: {fileID: 0}
     - target: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.83613265
+      value: 0.83613276
       objectReference: {fileID: 0}
     - target: {fileID: 496262, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -0.11041513
+      value: -0.110415146
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11444856, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
@@ -5014,6 +5060,21 @@ MeshCollider:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 03449589f4b1a70488b98224d7643e58, type: 3}
   m_PrefabInternal: {fileID: 350040458}
+--- !u!114 &1910259277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1910259271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ab9ca4277e97940aec21463e6035f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 3
+  interactionTransform: {fileID: 1910259276}
+  objectTransform: {fileID: 1910259276}
+  dropHeight: 1
 --- !u!1 &1977657832 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 149790, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
@@ -5280,6 +5341,7 @@ MonoBehaviour:
   radius: 1
   interactionTransform: {fileID: 618369103}
   objectTransform: {fileID: 2007973690}
+  dropHeight: 0.2
 --- !u!4 &2007973690 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 24efacb0e92b83f45bd0f52d4363631e, type: 3}

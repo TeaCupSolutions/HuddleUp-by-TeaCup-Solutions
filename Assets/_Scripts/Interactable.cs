@@ -7,7 +7,8 @@ public class Interactable : MonoBehaviour
     public Transform objectTransform;
     private GameObject[] players;
     private GameObject holder;
-    bool objectIsPickedUp = false;
+	bool objectIsPickedUp = false;
+	public float dropHeight = 2;
 
     void Start()
     {
@@ -36,7 +37,7 @@ public class Interactable : MonoBehaviour
 
         else if (objectIsPickedUp && Input.GetButtonDown("P" + this.holder.GetComponent<Player>().playerNum + "_Pickup"))
         {
-            objectTransform.position = holder.transform.position + new Vector3(1f, 0.2f, 0.2f);
+            objectTransform.position = holder.transform.position + new Vector3(1f, dropHeight, 0.2f);
             objectIsPickedUp = false;
         }
 

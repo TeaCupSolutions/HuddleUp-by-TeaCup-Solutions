@@ -23,7 +23,7 @@ public class Interactable : MonoBehaviour
             {
                 float distance = Vector3.Distance(player.transform.position, interactionTransform.position);
 
-                if (distance <= radius && Input.GetButtonDown("P" + player.GetComponent<Player>().playerNum + "_Pickup"))
+                if (distance <= radius && player.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().getPickupActionState())
                 {
                     objectTransform.position = player.transform.position + new Vector3(1f, 1f, 0.2f);
                     objectIsPickedUp = true;
@@ -35,7 +35,7 @@ public class Interactable : MonoBehaviour
             }
         }
 
-        else if (objectIsPickedUp && Input.GetButtonDown("P" + this.holder.GetComponent<Player>().playerNum + "_Pickup"))
+        else if (objectIsPickedUp && holder.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().getPickupActionState())
         {
             objectTransform.position = holder.transform.position + new Vector3(1f, dropHeight, 0.2f);
             objectIsPickedUp = false;

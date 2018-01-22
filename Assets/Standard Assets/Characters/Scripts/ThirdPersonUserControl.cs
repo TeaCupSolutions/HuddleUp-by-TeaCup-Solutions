@@ -1,9 +1,23 @@
 //TO DO!!!!!
-//m_replay to be set in menu along with choosing of files later/ multiple runs --folder structure???
 //to edit file so only one is needed by every thrid person controler for optimisation of inputs
 //using pre calculated velocity makes it easier to store movement --less space used too
 //move pickup here --controls currently in different place
-//must check timing between phusics updates could cause issues - BIG ISSUES!!!
+//timing between phusics updates could cause issues - BIG ISSUES!!!
+//pickup is still must definately fucked --cd/cr --pickup on replay very finecky
+
+/** FIX FOR TIMING??? just an  idea which probably only works in theory
+ * flatten - set input for next fixed update in update and wait till it happens until doing again
+ * all inputs handled in update
+ * all functionality handled in fixed update
+
+ * Slow
+ * flatten - runs update - waits for next fixed to apply inputs - runs update 
+ * more fixed - every next fiex ignored
+
+ * Fast
+ * flatten - runs update - waits for next fixed to apply inputs - runs update
+ * more updates - every update between ignored
+**/
 
 using UnityEngine;
 using System;
@@ -18,11 +32,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
     public class ThirdPersonUserControl : MonoBehaviour
     {
         public int player;
-        private ThirdPersonCharacter m_Character; // A reference to the ThirdPersonCharacter on the object
-        private Transform m_Cam;                  // A reference to the main camera in the scenes transform
-        private Vector3 m_CamForward;             // The current forward direction of the camera
+        private ThirdPersonCharacter m_Character;
+        private Transform m_Cam;
+        private Vector3 m_CamForward;
         private Vector3 m_Move;
-        private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
+        private bool m_Jump;
         private bool m_PickupAction;
         Rigidbody m_Rigidbody;
         StreamWriter m_sw;

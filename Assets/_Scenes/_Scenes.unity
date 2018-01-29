@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.449628, g: 0.49969918, b: 0.57565624, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0.44962758, g: 0.499699, b: 0.5756557, a: 1}
+>>>>>>> 07ad3a3c9854e44fa2638e529dbb6bde7de62c1d
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1148,7 +1152,11 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 376867628}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 278, y: 133, z: 0}
+=======
+  m_LocalPosition: {x: 9, y: 133, z: 0}
+>>>>>>> 07ad3a3c9854e44fa2638e529dbb6bde7de62c1d
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1106945539}
@@ -3402,7 +3410,11 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1040025285}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -308, y: -43, z: 0}
+=======
+  m_LocalPosition: {x: -39, y: -43, z: 0}
+>>>>>>> 07ad3a3c9854e44fa2638e529dbb6bde7de62c1d
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1106945539}
@@ -3627,7 +3639,11 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1106945535}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 408, y: 163, z: 0}
+=======
+  m_LocalPosition: {x: 139, y: 163, z: 0}
+>>>>>>> 07ad3a3c9854e44fa2638e529dbb6bde7de62c1d
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2115803059}
@@ -5686,7 +5702,11 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2062343123}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 278, y: -43, z: 0}
+=======
+  m_LocalPosition: {x: 9, y: -43, z: 0}
+>>>>>>> 07ad3a3c9854e44fa2638e529dbb6bde7de62c1d
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1106945539}
@@ -5852,7 +5872,11 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2115803058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -308, y: 133, z: 0}
+=======
+  m_LocalPosition: {x: -39, y: 133, z: 0}
+>>>>>>> 07ad3a3c9854e44fa2638e529dbb6bde7de62c1d
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1106945539}

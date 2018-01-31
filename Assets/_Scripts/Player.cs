@@ -16,6 +16,25 @@ public class Player : MonoBehaviour{
         playerNum = player;
     }
 
+    public void IncrementBasedOnID(int identifier)
+    {
+        if (identifier == 1) {
+            this.communication += 1;
+        }
+        else if (identifier == 2)
+        {
+            this.leadership += 1;
+        }
+        else if (identifier == 3)
+        {
+            this.creativity += 1;
+        }
+        else if (identifier == 4)
+        {
+            this.destructiveness += 1;
+        }
+    }
+
     public void Update()
     {
         UIText.text = this.toString();

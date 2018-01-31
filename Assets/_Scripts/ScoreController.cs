@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class ScoreController : MonoBehaviour {
     public Color active;
@@ -7,10 +8,33 @@ public class ScoreController : MonoBehaviour {
     private GameObject[] players;
     public Player playerStats;
 
-    void Start () {
+    void Start() {
         players = GameObject.FindGameObjectsWithTag("Player");
     }
-	
+
+    public void IncrementScore(int playerMSG, int scoreTypeMSG)
+    {
+        playerIndex = playerMSG;
+
+        foreach (GameObject player in players)
+        {
+            playerStats = player.GetComponent<Player>();
+            if (playerStats.playerNum == playerIndex)
+            {
+                playerStats.UIText.color = this.active;
+                playerStats.IncrementBasedOnID(scoreTypeMSG);
+            }
+            else
+            {
+                playerStats.UIText.color = this.notActive;
+            }
+        }
+    }
+}
+
+
+
+    /*
 	void Update () {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
@@ -93,5 +117,4 @@ public class ScoreController : MonoBehaviour {
                 }
             }
         }
-    }
-}
+    }*/

@@ -11,20 +11,18 @@ public class MentorConnector : MonoBehaviour
         IsReplayState = 102,
     }
 
+    enum IngoingRequests
+    {
+        IncreaseScore = 151,
+    }
+
     bool isAtStartup = true;
     void Update()
     {
         if (isAtStartup)
         {
             NetworkServer.Listen(8888);
-            NetworkServer.RegisterHandler(MsgType.Ready, OnPlayerReadyMessage);
-
             isAtStartup = false;
         }
-    }
-
-    public void OnPlayerReadyMessage(NetworkMessage netMsg)
-    {
-        // TODO: create player and call PlayerIsReady()
     }
 }

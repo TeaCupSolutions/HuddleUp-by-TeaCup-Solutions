@@ -27,7 +27,7 @@ public class StateMessage : MessageBase
 }
 
 public class LevelManager : MonoBehaviour {
-    ScoreController scoreController;
+    public ScoreController scoreController;
 
     // Use this for initialization
     void Start () {

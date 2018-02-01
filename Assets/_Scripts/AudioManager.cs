@@ -10,15 +10,6 @@ public class AudioManager : MonoBehaviour {
 	public AudioClip[] audioClip;
 	public bool clipFound;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 	public void Play(string clipName)
 	{
 		for (int i = 0; i < audioName.Length ; i++) 

@@ -10,11 +10,15 @@ public class Interactable : MonoBehaviour
     private GameObject holder;
 	bool objectIsPickedUp = false;
 	public float dropHeight = 2;
+	public	GameObject sound;
+	public	AudioManager AM;
 
     void Start()                                                                                             //This will run at the start of the program
     {
         players = GameObject.FindGameObjectsWithTag("Player");                                               //Get all of the objects in the game with the tag "player" and put them into the array of game objects
-    }
+		sound=GameObject.FindGameObjectWithTag("AudioManager");
+		AM=sound.GetComponent<AudioManager>();
+	}
 
     void Update()                                                                                            //This will run repeatedly until the game ends
     {
@@ -32,7 +36,8 @@ public class Interactable : MonoBehaviour
                     objectTransform.position = player.transform.position + new Vector3(1f, 1f, 0.2f);        //Set the position of the object to the position of the player plus a little difference
                     objectIsPickedUp = true;
                     holder = player;                                                                         //Set holder to player.  Holder will tell which player is holding the object.
-                    break;
+					AM.Play("pickup");
+					break;
                 }
             }
         }
@@ -44,6 +49,7 @@ public class Interactable : MonoBehaviour
             //Apply gravity to the object
             //objectTransform.position = holder.transform.position + new Vector3(1f, dropHeight, 0.2f);
             objectIsPickedUp = false;
+			AM.Play("drop");
         }
         
         else if (objectIsPickedUp)                                                                           //If the player hasn't given any more commands...

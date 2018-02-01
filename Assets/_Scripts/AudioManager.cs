@@ -9,7 +9,7 @@ public class AudioManager : MonoBehaviour {
 	public string[] audioName;
 	public AudioClip[] audioClip;
 	public bool clipFound;
-
+	//Searches through clipnames ie. drop and sees if there is a corresponding audio clip to it.
 	public void Play(string clipName)
 	{
 		for (int i = 0; i < audioName.Length ; i++) 

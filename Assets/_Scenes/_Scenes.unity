@@ -3688,7 +3688,7 @@ MonoBehaviour:
   - drop
   - pickup
   audioClip:
-  - {fileID: 8300000, guid: 4c9e4c5a5204ba943b668623060011e7, type: 3}
+  - {fileID: 8300000, guid: ec41cfb0cef6d974b916cdf3a6e90488, type: 3}
   - {fileID: 8300000, guid: ba7f4a1497854ce4687a14e4cefc65fc, type: 3}
   clipFound: 0
 --- !u!4 &1154336739

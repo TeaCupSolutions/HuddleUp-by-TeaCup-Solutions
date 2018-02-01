@@ -12,8 +12,15 @@ public class OptionsMenu : MonoBehaviour {
 
     Resolution[] resolutions;
 
+	public	GameObject sound;
+	public	AudioManager AM;
+
     void Start()
     {
+		//connecting to audiomnaer through tag
+		sound=GameObject.FindGameObjectWithTag("AudioManager");
+		AM=sound.GetComponent<AudioManager>();
+
         //gets a list of possible resolutions for the user
         resolutions = Screen.resolutions;
 
@@ -49,31 +56,33 @@ public class OptionsMenu : MonoBehaviour {
     {
 		Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-
+		AM.Play("click");
     }
 
 	public void SetQuality2 (int qualityIndex)
 	{
 		QualitySettings.SetQualityLevel(qualityIndex);
-
+		AM.Play("click");
 	}
 
     // Sets volume from volume slider
     public void SetVolume(float volume)
     {
         audioMixer.SetFloat("MasterVolume", volume);
+		AM.Play("click");
     }
 
     // sets quality from quality dropdown
     public void SetQuality (int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
-
+		AM.Play("click");
     }
 
     //Sets fullscreen from toggle (ONLY WORKS WHEN BUILT)
     public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+		AM.Play("click");
     }
 }

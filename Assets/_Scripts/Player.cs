@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Player : MonoBehaviour{
+public class Player : MonoBehaviour
+{
     public Text UIText;
     public int playerNum = 0;
     public int leadership = 0;
     public int communication = 0;
     public int creativity = 0;
     public int destructiveness = 0;
+	public string holding;
 
     public Player(int player)
     {

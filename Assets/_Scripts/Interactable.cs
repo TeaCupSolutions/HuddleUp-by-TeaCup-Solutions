@@ -9,6 +9,7 @@ public class Interactable : MonoBehaviour
 	public Transform interactionTransform;
 	//public GameObject playersObject;
 	public GameObject condictionObjectObject;
+    public SubTask subtask;
 	private string condictionObject;
 	private float startTimeOfInteraction;
 	private bool playerHasStartedInteraction = false;
@@ -75,6 +76,9 @@ public class Interactable : MonoBehaviour
 		{
 			Debug.Log ("Check1");
 			Destroy (gameObject);
+            if (subtask != null) {
+                subtask.IsCompleted = true;
+            }
 		}
 	}
 }

@@ -1,59 +1,41 @@
 fileFormatVersion: 2
-guid: f2dd6516b6dcc3f4a98f6ea8a8a3d5ad
-timeCreated: 1517845964
+guid: 090949edd8bc8964684b518a973edd6f
+timeCreated: 1517846310
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: body
-    100002: bottom grey
-    100004: Box002
-    100006: Object001
-    100008: screen
-    100010: stand
-    100012: //RootNode
-    400000: body
-    400002: bottom grey
-    400004: Box002
-    400006: Object001
-    400008: screen
-    400010: stand
-    400012: //RootNode
-    2300000: body
-    2300002: bottom grey
-    2300004: Box002
-    2300006: Object001
-    2300008: screen
-    2300010: stand
-    3300000: body
-    3300002: bottom grey
-    3300004: Box002
-    3300006: Object001
-    3300008: screen
-    3300010: stand
-    4300000: body
-    4300002: Object001
-    4300004: screen
-    4300006: bottom grey
-    4300008: stand
-    4300010: Box002
-    9500000: //RootNode
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: toilet
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 01 - Default
-    second: {fileID: 2100000, guid: cf5bc67065d88bf42a3f10cfa9ed9381, type: 2}
+      name: 24 - Default
+    second: {fileID: 2100000, guid: 24e8318ec1467ee44b86d47c1f2ed988, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 02 - Default
-    second: {fileID: 2100000, guid: f1497e7619a2c3f48941d78c3d133dcf, type: 2}
+      name: BRASSCE
+    second: {fileID: 2100000, guid: e59368d7b845683488562c62365925ed, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: 35c68fac80bbf9548bf6cf655b67233e, type: 2}
+      name: Metal_Dark_Gold
+    second: {fileID: 2100000, guid: 65c3cf74102a69841a4480d99f5d575b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WHITE PLSTC REF
+    second: {fileID: 2100000, guid: b20f4bd46be068f44b5d63280293a7a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WOOD - AVODIRE
+    second: {fileID: 2100000, guid: c5046bd4d2c0be745a01904b0bcd2a00, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -125,7 +107,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

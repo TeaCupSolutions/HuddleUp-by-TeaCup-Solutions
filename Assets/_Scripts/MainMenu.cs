@@ -14,11 +14,11 @@ public class MainMenu : MonoBehaviour {
 		AM=sound.GetComponent<AudioManager>();
 	}
     public void PlayGame() {
+		AM.Play("click");
         StaticValues.IsReplay = false;
         DateTime dt = System.DateTime.Now;
         StaticValues.ReplayName = dt.Year + "" + dt.Month + "" + dt.Hour + "" + dt.Hour + "" + dt.Minute + "" + dt.Second;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-		AM.Play("pickup");
     }
 
     public void ShowReplay()
@@ -29,7 +29,7 @@ public class MainMenu : MonoBehaviour {
 
     public void ExitGame()
     {
-		AM.Play("pickup");
+		AM.Play("click");
         //dosn't work in editor
         Application.Quit();
     }

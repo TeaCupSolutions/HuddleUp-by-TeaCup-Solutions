@@ -36,6 +36,9 @@ public class Task : MonoBehaviour {
                     break;
                 }
             }
+            if (taskStatus) {
+                Debug.Log("Task Completed");
+            }
             this.IsCompleted = taskStatus;
         }
 	}

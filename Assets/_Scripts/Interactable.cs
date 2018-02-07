@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,7 +23,10 @@ public class Interactable : MonoBehaviour
 	void Start()
 	{
 		players = GameObject.FindGameObjectsWithTag("Player");
-		condictionObject = condictionObjectObject.GetComponent<Pickupable>().name;
+        if (condictionObjectObject)
+        {
+            condictionObject = condictionObjectObject.GetComponent<Pickupable>().name;
+        }
 		//Debug.Log ("Condiction Object is: " + condictionObject);
 	}
 	
@@ -48,20 +52,27 @@ public class Interactable : MonoBehaviour
 			{
 				float distance = Vector3.Distance(player.transform.position, interactionTransform.position); //Get the distance betweent the player and the object
 
-				if (distance <= radius &&
-					player.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().
-					getPickupActionState())                                                                  //If the distance is less than the radius and the player has pressed a button...  player.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().getPickupActionState() returns true if the player has pressed the pick up button
-				{
-					//Debug.Log ("Hello");
-					//Get the object the player is holding
-					string objectBeingHeld = player.GetComponent<Player>().holding;
+                if (distance <= radius &&
+                    player.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().
+                    getPickupActionState())                                                                  //If the distance is less than the radius and the player has pressed a button...  player.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().getPickupActionState() returns true if the player has pressed the pick up button
+                {
+                    //Debug.Log ("Hello");
+                    //Get the object the player is holding
+                    string objectBeingHeld = player.GetComponent<Player>().holding;
 
-					if (objectBeingHeld == condictionObject)
-					{
-						//Debug.Log ("Check1");
-						startTimeOfInteraction = Time.time * 1000;
-						playerHasStartedInteraction = true;
-					}
+                    if (condictionObject != null)
+                    {
+                        if (objectBeingHeld == condictionObject)
+                        {
+                            //Debug.Log ("Check1");
+                            startTimeOfInteraction = Time.time * 1000;
+                            playerHasStartedInteraction = true;
+                        }
+                    }
+                    else {
+                        startTimeOfInteraction = Time.time * 1000;
+                        playerHasStartedInteraction = true;
+                    }
 				}
 			}
 		}
@@ -75,7 +86,7 @@ public class Interactable : MonoBehaviour
 		if (percentage >= 100)
 		{
 			Debug.Log ("Check1");
-			Destroy (gameObject);
+            playerHasStartedInteraction = false;
             if (subtask != null) {
                 subtask.IsCompleted = true;
             }

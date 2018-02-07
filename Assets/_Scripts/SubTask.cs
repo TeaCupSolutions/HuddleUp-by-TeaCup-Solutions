@@ -10,7 +10,7 @@ public enum SubTaskAction
 public class SubTask : MonoBehaviour {
     public string description;
     public GameObject onCompleteObject;
-    SubTaskAction onCompleteAction;
+    public SubTaskAction onCompleteAction;
     bool isCompleted;
 
     public bool IsCompleted

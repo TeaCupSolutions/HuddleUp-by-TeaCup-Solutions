@@ -6,7 +6,7 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
 	//Declare Variables
-	public float radius = 3f;
+	public float radius = 1f;
 	public Transform interactionTransform;
 	//public GameObject playersObject;
 	public GameObject condictionObjectObject;
@@ -44,7 +44,6 @@ public class Interactable : MonoBehaviour
 			//Debug.Log (completionPercentage);
 			updateSlider(completionPercentage);
 		}
-
 		else
 		{
 			//Check if a player has interacted with the object
@@ -88,7 +87,7 @@ public class Interactable : MonoBehaviour
 			Debug.Log ("Check1");
             playerHasStartedInteraction = false;
             if (subtask != null) {
-                subtask.IsCompleted = true;
+                subtask.CompletedIntercation(true,this, condictionObjectObject);
             }
 		}
 	}

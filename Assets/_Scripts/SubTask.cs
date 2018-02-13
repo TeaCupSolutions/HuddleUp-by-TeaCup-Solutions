@@ -1,16 +1,20 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public enum SubTaskAction
 {
     GivePlayer,
     SpawnInScene,
     Destroy,
+    MakeInteractableVisible,
 }
 
 public class SubTask : MonoBehaviour {
     public string description;
     public GameObject onCompleteObject;
     public SubTaskAction onCompleteAction;
+    public int amountToComplete = 1;
+    public int amountCompleted = 0;
     bool isCompleted;
 
     public bool IsCompleted
@@ -18,10 +22,18 @@ public class SubTask : MonoBehaviour {
         get {
             return isCompleted;
         }
-        set {
-            //will be set to completion on interaction
-            isCompleted = value;
-            this.HandleCompletion();
+    }
+
+    public void CompletedIntercation(bool isCompleted, Interactable interctable, GameObject obj)
+    {
+        //will be set to completion on interaction
+        amountCompleted++;
+        this.HandleCompletion(interctable, obj);
+
+        if (amountCompleted == amountToComplete)
+        {
+            Debug.Log(description + " Completed");
+            this.isCompleted = isCompleted;
         }
     }
 
@@ -32,14 +44,47 @@ public class SubTask : MonoBehaviour {
     }
 
     // Use this for initialization
-    void HandleCompletion() {
-        if (OnCompleteAction == SubTaskAction.GivePlayer) {
-
+    void HandleCompletion(Interactable interctable, GameObject obj)
+    {
+        if (OnCompleteAction == SubTaskAction.GivePlayer)
+        {
+            Instantiate(onCompleteObject);
+            //then magic it to the player somehow
         }
-        else if (OnCompleteAction == SubTaskAction.SpawnInScene) {
-
+        else if (OnCompleteAction == SubTaskAction.SpawnInScene)
+        {
+            Instantiate(onCompleteObject);
+            //then give it the right positions and stuff
         }
-        else if (OnCompleteAction == SubTaskAction.Destroy) {
+        else if (OnCompleteAction == SubTaskAction.Destroy)
+        {
+            if (onCompleteObject)
+            {
+                Destroy(onCompleteObject);
+            }
         }
-	}
+        else if (OnCompleteAction == SubTaskAction.MakeInteractableVisible)
+        {
+            foreach (MeshCollider mc in interctable.GetComponents<MeshCollider>())
+            {
+                mc.enabled = true;
+            }
+            foreach (MeshRenderer mr in interctable.GetComponents<MeshRenderer>())
+            {
+                mr.enabled = true;
+            }
+            foreach (MeshCollider mc in interctable.GetComponentsInChildren<MeshCollider>())
+            {
+                mc.enabled = true;
+            }
+            foreach (MeshRenderer mr in interctable.GetComponentsInChildren<MeshRenderer>())
+            {
+                mr.enabled = true;
+            }
+            if (obj) {
+                Destroy(obj);
+            }
+        }
+    }
+    
 }

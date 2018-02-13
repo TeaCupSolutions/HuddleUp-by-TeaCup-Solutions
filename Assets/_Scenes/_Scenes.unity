@@ -525,7 +525,7 @@ GameObject:
   - component: {fileID: 130265927}
   - component: {fileID: 130265928}
   m_Layer: 0
-  m_Name: Task3Subtask1
+  m_Name: Task3Subtask1Chairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1814,7 +1814,7 @@ MonoBehaviour:
   radius: 2
   interactionTransform: {fileID: 460068356}
   condictionObjectObject: {fileID: 195674169}
-  subtask: {fileID: 0}
+  subtask: {fileID: 1778751422}
 --- !u!1 &481263882 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: f9fc1dbce7ceb1244995ec59c7d6b1ee, type: 3}
@@ -3720,7 +3720,7 @@ GameObject:
   - component: {fileID: 1050743052}
   - component: {fileID: 1050743053}
   m_Layer: 0
-  m_Name: Task2Subtask1
+  m_Name: Task2Subtask1Sofa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6130,7 +6130,7 @@ GameObject:
   - component: {fileID: 1778751421}
   - component: {fileID: 1778751422}
   m_Layer: 0
-  m_Name: Task2Subtask2
+  m_Name: Task2Subtask2Couch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

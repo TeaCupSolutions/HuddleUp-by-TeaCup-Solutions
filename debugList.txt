@@ -1,0 +1,15 @@
+Bug List: Non prioritised
+
+Get a different way to trigger the inteaction or the pickup
+Replay can go out of sync do to fixed update issue
+App screen doesn't update properly when connecting with the game
+You can activate the interactable after it is done
+Add squares to areas where objects appea
+Sounds aren't using master volume
+The sound slider is consistantly playing a sound that distracks the player
+The click button sound plays at the start of the game when the menu is loaded
+There should be a scroll sound so that when you hover over the buttons in the menu the player will hear a sound for every button
+The plate modle has a front culling issue
+The buttons in the menu don't fit on the screen
+Player can pick up multiple objects
+You can place objects onto walls

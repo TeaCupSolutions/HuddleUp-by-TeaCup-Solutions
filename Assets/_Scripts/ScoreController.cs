@@ -2,8 +2,6 @@
 using UnityEngine;
 
 public class ScoreController : MonoBehaviour {
-    public Color active;
-    public Color notActive;
     public int playerIndex;
     private GameObject[] players;
     public Player playerStats;
@@ -21,12 +19,7 @@ public class ScoreController : MonoBehaviour {
             playerStats = player.GetComponent<Player>();
             if (playerStats.playerNum == playerIndex)
             {
-                playerStats.UIText.color = this.active;
                 playerStats.IncrementBasedOnID(scoreTypeMSG);
-            }
-            else
-            {
-                playerStats.UIText.color = this.notActive;
             }
         }
     }

@@ -58,10 +58,10 @@ public class Player : MonoBehaviour
 		HUD_BTC_MIN_X = HUD_BTC.localPosition.x - HUD_BTC.rect.width; // Min position is our max position - bar width
 
 
-		Leadership_Max = 25;
-		Communication_Max = 25;
-		Creativity_Max = 25;
-		BTC_Max = 25;
+		Leadership_Max = 15;
+		Communication_Max = 15;
+		Creativity_Max = 15;
+		BTC_Max = 15;
 
 
         //set bar to min position

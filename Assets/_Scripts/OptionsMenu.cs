@@ -69,7 +69,6 @@ public class OptionsMenu : MonoBehaviour {
     public void SetVolume(float volume)
     {
         audioMixer.SetFloat("MasterVolume", volume);
-		AM.Play("click");
     }
 
     // sets quality from quality dropdown

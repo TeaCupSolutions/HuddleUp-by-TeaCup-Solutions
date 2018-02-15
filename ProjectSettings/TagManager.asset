@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - AudioManager
+  - chair
+  - couch
   layers:
   - Default
   - TransparentFX

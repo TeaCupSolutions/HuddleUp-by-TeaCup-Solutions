@@ -48,7 +48,12 @@ public class Pickupable : MonoBehaviour
 					player.GetComponent<Player>().holding = name;
                     //Debug.Log (player.GetComponent<Player> ().holding);
                     holder = player;                                                                         //Set holder to player.  Holder will tell which player is holding the object.
-					AM.Play("pickup");
+					if(this.tag=="chair")
+						AM.Play("chairPickUp");
+					else if(this.tag=="couch")
+						AM.Play("couchPickUp");
+					else
+						AM.Play("pickup");
 					break;
                 }
             }
@@ -62,7 +67,12 @@ public class Pickupable : MonoBehaviour
             //objectTransform.position = holder.transform.position + new Vector3(1f, dropHeight, 0.2f);
             this.EnableMeshColliders(true);
             objectIsPickedUp = false;
-			AM.Play("drop");
+			if(this.tag=="chair")
+				AM.Play("chairDrop");
+			else if(this.tag=="couch")
+				AM.Play("couchDrop");
+			else
+				AM.Play("drop");
         }
         
         else if (objectIsPickedUp)                                                                           //If the player hasn't given any more commands...

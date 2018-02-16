@@ -41,7 +41,6 @@ public class ReplayMenu : MonoBehaviour {
     {
 		AM.Play("click");
         StaticValues.IsReplay = true;
-        Debug.Log(StaticValues.IsReplay);
         StaticValues.ReplayName = txt;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

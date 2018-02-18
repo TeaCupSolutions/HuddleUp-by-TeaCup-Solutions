@@ -7,15 +7,18 @@ public enum SubTaskAction
     SpawnInScene,
     Destroy,
     MakeInteractableVisible,
+    MakeInteractableInvisible,
 }
 
 public class SubTask : MonoBehaviour {
     public string description;
     public GameObject onCompleteObject;
     public SubTaskAction onCompleteAction;
+    public SubTask priorSubTask;
     public int amountToComplete = 1;
     public int amountCompleted = 0;
     bool isCompleted;
+    private bool runTask = false;
 
     public bool IsCompleted
     {
@@ -27,13 +30,27 @@ public class SubTask : MonoBehaviour {
     public void CompletedIntercation(bool isCompleted, Interactable interctable, GameObject obj)
     {
         //will be set to completion on interaction
-        amountCompleted++;
-        this.HandleCompletion(interctable, obj);
-
-        if (amountCompleted == amountToComplete)
+        if (priorSubTask)
         {
-            Debug.Log(description + " Completed");
-            this.isCompleted = isCompleted;
+            if (priorSubTask.isCompleted)
+            {
+                runTask = true;
+            }
+        }
+        else
+        {
+            runTask = true;
+        }
+
+        if (runTask) {
+            amountCompleted++;
+            this.HandleCompletion(interctable, obj);
+
+            if (amountCompleted == amountToComplete)
+            {
+                Debug.Log(description + " Completed");
+                this.isCompleted = isCompleted;
+            }
         }
     }
 
@@ -85,6 +102,24 @@ public class SubTask : MonoBehaviour {
                 Destroy(obj);
             }
         }
-    }
-    
+        else if (OnCompleteAction == SubTaskAction.MakeInteractableInvisible)
+        {
+            foreach (MeshCollider mc in interctable.GetComponents<MeshCollider>())
+            {
+                mc.enabled = false;
+            }
+            foreach (MeshRenderer mr in interctable.GetComponents<MeshRenderer>())
+            {
+                mr.enabled = false;
+            }
+            foreach (MeshCollider mc in interctable.GetComponentsInChildren<MeshCollider>())
+            {
+                mc.enabled = false;
+            }
+            foreach (MeshRenderer mr in interctable.GetComponentsInChildren<MeshRenderer>())
+            {
+                mr.enabled = false;
+            }
+        }
+    } 
 }

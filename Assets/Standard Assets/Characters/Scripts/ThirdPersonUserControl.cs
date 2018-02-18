@@ -109,6 +109,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                     float v = Input.GetAxis("P" + this.player + "_Vertical");
                     m_Crouch = Input.GetButtonDown("P" + this.player + "_Crouch");
                     m_PickupAction = Input.GetButtonDown("P" + this.player + "_Pickup");
+                    m_Jump = Input.GetButtonDown("P" + this.player + "_Jump");
                     // calculate move direction to pass to character
                     if (m_Cam != null)
                     {
@@ -120,11 +121,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                     {
                         // we use world-relative directions in the case of no main camera
                         m_Move = v * Vector3.forward + h * Vector3.right;
-                    }
-
-                    if (!m_Jump)
-                    {
-                        m_Jump = Input.GetButtonDown("P" + this.player + "_Jump");
                     }
 
                     m_sw.WriteLine(this.player + "|" + m_Move.x + "|" + m_Move.y + "|" + m_Move.z + "|" + m_Crouch + "|" + m_Jump + "|" + m_PickupAction);

@@ -33,10 +33,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
     {
         public int player;
         private ThirdPersonCharacter m_Character;
-        private Transform m_Cam;
+        public Transform m_Cam;
         private Vector3 m_CamForward;
         private Vector3 m_Move;
-        private bool m_Jump;
+        private bool m_Jump, m_Crouch, m_IsInputReady = false;
         private bool m_PickupAction;
         Rigidbody m_Rigidbody;
         StreamWriter m_sw;
@@ -74,18 +74,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                 }
             }
 
-            // get the transform of the main camera
-            if (Camera.main != null)
-            {
-                m_Cam = Camera.main.transform;
-            }
-            else
-            {
-                Debug.LogWarning(
-                    "Warning: no main camera found. Third person character needs a Camera tagged \"MainCamera\", for camera-relative controls.", gameObject);
-                // we use self-relative controls in this case, which probably isn't what the user wants, but hey, we warned them!
-            }
-
             // get the third person character ( this should never be null due to require component )
             m_Character = GetComponent<ThirdPersonCharacter>();
         }
@@ -93,9 +81,55 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void Update()
         {
-            if (!m_Jump)
+            if (!m_IsInputReady)
             {
-                m_Jump = Input.GetButtonDown("P" + this.player + "_Jump");
+                if (StaticValues.IsReplay)
+                {
+                    var line = m_sr.ReadLine();
+                    if (line != null)
+                    {
+                        String[] inputs = line.Split('|');
+                        m_Move.x = float.Parse(inputs[1]);
+                        m_Move.y = float.Parse(inputs[2]);
+                        m_Move.z = float.Parse(inputs[3]);
+                        m_Crouch = (inputs[4] == "True");
+                        m_Jump = (inputs[5] == "True");
+                        m_PickupAction = (inputs[6] == "True");
+                        m_IsInputReady = true;
+                    }
+                    else
+                    {
+                        StartCoroutine(WaitBeforeExit(5));
+                    }
+                }
+                else
+                {
+                    // read inputs
+                    float h = Input.GetAxis("P" + this.player + "_Horizontal");
+                    float v = Input.GetAxis("P" + this.player + "_Vertical");
+                    m_Crouch = Input.GetButtonDown("P" + this.player + "_Crouch");
+                    m_PickupAction = Input.GetButtonDown("P" + this.player + "_Pickup");
+                    // calculate move direction to pass to character
+                    if (m_Cam != null)
+                    {
+                        // calculate camera relative direction to move:
+                        m_CamForward = Vector3.Scale(m_Cam.forward, new Vector3(1, 0, 1)).normalized;
+                        m_Move = v * m_CamForward + h * m_Cam.right;
+                    }
+                    else
+                    {
+                        // we use world-relative directions in the case of no main camera
+                        m_Move = v * Vector3.forward + h * Vector3.right;
+                    }
+
+                    if (!m_Jump)
+                    {
+                        m_Jump = Input.GetButtonDown("P" + this.player + "_Jump");
+                    }
+
+                    m_sw.WriteLine(this.player + "|" + m_Move.x + "|" + m_Move.y + "|" + m_Move.z + "|" + m_Crouch + "|" + m_Jump + "|" + m_PickupAction);
+                    m_IsInputReady = true;
+                }
             }
         }
 
@@ -103,42 +137,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         // Fixed update is called in sync with physics
         private void FixedUpdate()
         {
-            if (StaticValues.IsReplay) {
-                var line = m_sr.ReadLine();
-                if (line != null)
-                {
-                    String[] inputs = line.Split('|');
-                    m_Character.Move(new Vector3(float.Parse(inputs[1]), float.Parse(inputs[2]), float.Parse(inputs[3])), (inputs[4] == "True"), (inputs[5] == "True"));
-                    m_PickupAction = (inputs[6] == "True");
-                }
-                else {
-                    StartCoroutine(WaitSeconds(3));
-                    SceneManager.LoadScene(0);
-                }    
-            } else {
-                // read inputs
-                float h = Input.GetAxis("P"+ this.player +"_Horizontal");
-                float v = Input.GetAxis("P" + this.player + "_Vertical");
-                bool crouch = Input.GetButtonDown("P" + this.player + "_Crouch");
-                m_PickupAction = Input.GetButtonDown("P" + this.player + "_Pickup");
-                // calculate move direction to pass to character
-                if (m_Cam != null)
-                {
-                    // calculate camera relative direction to move:
-                    m_CamForward = Vector3.Scale(m_Cam.forward, new Vector3(1, 0, 1)).normalized;
-                    m_Move = v * m_CamForward + h * m_Cam.right;
-                }
-                else
-                {
-                    // we use world-relative directions in the case of no main camera
-                    m_Move = v * Vector3.forward + h * Vector3.right;
-                }
-
-                m_sw.WriteLine(this.player + "|" + m_Move.x + "|" + m_Move.y + "|" + m_Move.z + "|" + crouch + "|" + m_Jump + "|" + m_PickupAction);
-
-                // pass all parameters to the character control script
-                m_Character.Move(m_Move, crouch, m_Jump);
+            if (m_IsInputReady) {
+                m_Character.Move(m_Move, m_Crouch, m_Jump);
                 m_Jump = false;
+                m_IsInputReady = false;
             }
         }
 
@@ -156,9 +158,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             return m_PickupAction;
         }
 
-        IEnumerator WaitSeconds(int seconds)
+        IEnumerator WaitBeforeExit(int seconds)
         {
             yield return new WaitForSeconds(seconds);
+            SceneManager.LoadScene(0);
         }
     }
 }

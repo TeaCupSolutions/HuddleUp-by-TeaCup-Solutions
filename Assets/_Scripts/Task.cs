@@ -37,7 +37,7 @@ public class Task : MonoBehaviour {
                 }
             }
             if (taskStatus) {
-                Debug.Log("Task Completed");
+                Debug.Log(description + " Task Completed");
             }
             this.IsCompleted = taskStatus;
         }

@@ -18,7 +18,7 @@ public class Pickupable : MonoBehaviour
     {
         if (holder)
         {
-            holder.GetComponent<Player>().holding = null;
+            holder.GetComponent<Player>().holding = "";
         }
     }
 
@@ -36,10 +36,8 @@ public class Pickupable : MonoBehaviour
             foreach (GameObject player in players)                                                           //For each player in the game...
             {
                 float distance = Vector3.Distance(player.transform.position, interactionTransform.position); //Get the distance betweent the player and the object
-
                 if (distance <= radius &&
-                    player.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().
-                    getPickupActionState())                                                                  //If the distance is less than the radius and the player has pressed a button...  player.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().getPickupActionState() returns true if the player has pressed the pick up button
+                    player.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().getPickupActionState() && player.GetComponent<Player>().holding == "")                                                                  //If the distance is less than the radius and the player has pressed a button...  player.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().getPickupActionState() returns true if the player has pressed the pick up button
                 {
                     //Adjust the position of the object
                     this.EnableMeshColliders(false);
@@ -60,14 +58,14 @@ public class Pickupable : MonoBehaviour
         }
         
         else if (objectIsPickedUp &&
-            holder.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().
-            getPickupActionState())                                                                          //If the object is picked up and the player wants to drop it...
+            holder.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().getPickupActionState())                                                                          //If the object is picked up and the player wants to drop it...
         {
             //Apply gravity to the object
             //objectTransform.position = holder.transform.position + new Vector3(1f, dropHeight, 0.2f);
             this.EnableMeshColliders(true);
+            holder.GetComponent<Player>().holding = "";
             objectIsPickedUp = false;
-			if(this.tag=="chair")
+            if (this.tag=="chair")
 				AM.Play("chairDrop");
 			else if(this.tag=="couch")
 				AM.Play("couchDrop");
@@ -80,34 +78,6 @@ public class Pickupable : MonoBehaviour
             //Move the object with the player
             objectTransform.position = holder.transform.position + new Vector3(1f, 1f, 0.2f);
         }
-
-        /*
-        if (!objectIsPickedUp)
-        {
-            foreach (GameObject player in players)
-            {
-                float distance = Vector3.Distance(player.transform.position, interactionTransform.position);
-
-                if (distance <= radius && Input.GetKeyDown(KeyCode.JoystickButton0))
-                {
-                    objectTransform.position = player.transform.position + new Vector3(0.2f, 1f, 0.2f);
-                    objectIsPickedUp = true;
-                    holder = player;
-                }
-            }
-        }
-
-        else if(objectIsPickedUp && Input.GetKeyDown(KeyCode.JoystickButton0))
-        {
-            objectTransform.position = holder.transform.position + new Vector3(0.2f, 0f, 0.2f);
-            objectIsPickedUp = false;
-        }
-
-        else if (objectIsPickedUp)
-        {
-            objectTransform.position = holder.transform.position + new Vector3(0.2f, 1f, 0.2f);
-        }
-        */
     }
 
     private void EnableMeshColliders(bool isEnabled)

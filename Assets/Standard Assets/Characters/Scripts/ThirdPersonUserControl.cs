@@ -38,6 +38,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private Vector3 m_Move;
         private bool m_Jump, m_Crouch, m_IsInputReady = false;
         private bool m_PickupAction;
+        private bool m_InteractAction;
         Rigidbody m_Rigidbody;
         StreamWriter m_sw;
         StreamReader m_sr;
@@ -95,6 +96,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                         m_Crouch = (inputs[4] == "True");
                         m_Jump = (inputs[5] == "True");
                         m_PickupAction = (inputs[6] == "True");
+                        m_InteractAction = (inputs[7] == "True");
                         m_IsInputReady = true;
                     }
                     else
@@ -109,6 +111,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                     float v = Input.GetAxis("P" + this.player + "_Vertical");
                     m_Crouch = Input.GetButtonDown("P" + this.player + "_Crouch");
                     m_PickupAction = Input.GetButtonDown("P" + this.player + "_Pickup");
+                    m_InteractAction = Input.GetButtonDown("P" + this.player + "_Interact");
                     m_Jump = Input.GetButtonDown("P" + this.player + "_Jump");
                     // calculate move direction to pass to character
                     if (m_Cam != null)
@@ -123,7 +126,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                         m_Move = v * Vector3.forward + h * Vector3.right;
                     }
 
-                    m_sw.WriteLine(this.player + "|" + m_Move.x + "|" + m_Move.y + "|" + m_Move.z + "|" + m_Crouch + "|" + m_Jump + "|" + m_PickupAction);
+                    m_sw.WriteLine(this.player + "|" + m_Move.x + "|" + m_Move.y + "|" + m_Move.z + "|" + m_Crouch + "|" + m_Jump + "|" + m_PickupAction + "|" + m_InteractAction);
                     m_IsInputReady = true;
                 }
             }
@@ -152,6 +155,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         public bool getPickupActionState() {
             return m_PickupAction;
+        }
+
+        public bool getInteractionActionState()
+        {
+            return m_InteractAction;
         }
 
         IEnumerator WaitBeforeExit(int seconds)

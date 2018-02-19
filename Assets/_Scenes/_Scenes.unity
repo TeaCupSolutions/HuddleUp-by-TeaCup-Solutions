@@ -174,6 +174,107 @@ Transform:
   m_Father: {fileID: 2098081271}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &24448582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 24448583}
+  - component: {fileID: 24448587}
+  - component: {fileID: 24448586}
+  - component: {fileID: 24448585}
+  - component: {fileID: 24448584}
+  m_Layer: 0
+  m_Name: poop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &24448583
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 24448582}
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 13.328, y: 6.585, z: -6.7023845}
+  m_LocalScale: {x: 0.13217999, y: 0.12356, z: -0.12133}
+  m_Children: []
+  m_Father: {fileID: 1606608855}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &24448584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 24448582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7e5c031499bda449a68214d5c072ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 2
+  interactionTransform: {fileID: 24448583}
+  condictionObjectObject: {fileID: 0}
+  subtask: {fileID: 902538980}
+  isOneShotInteraction: 1
+--- !u!23 &24448585
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 24448582}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &24448586
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 24448582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &24448587
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 24448582}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &25056417
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,6 +915,54 @@ Transform:
   m_Children:
   - {fileID: 1644945639}
   m_Father: {fileID: 958254104}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &89973229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1939799432742554, guid: bbcfafd09e4b9f24984163c67bb29a1e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 89973231}
+  - component: {fileID: 89973230}
+  m_Layer: 0
+  m_Name: Task5Subtask1PetDoge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &89973230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 89973229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7debc14e0d9d4f84c99051566372f157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Pet Doge
+  onCompleteObject: {fileID: 0}
+  onCompleteAction: 4
+  priorSubTasks: []
+  amountToComplete: 1
+  amountCompleted: 0
+--- !u!4 &89973231
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4683372548113366, guid: bbcfafd09e4b9f24984163c67bb29a1e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 89973229}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1956700514}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &90617101
@@ -1762,7 +1911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Gather Chairs
   onCompleteObject: {fileID: 0}
-  onCompleteAction: 3
+  onCompleteAction: 2
   priorSubTasks: []
   amountToComplete: 4
   amountCompleted: 0
@@ -1963,6 +2112,108 @@ RectTransform:
   m_AnchoredPosition: {x: -0.1, y: -0.000059127808}
   m_SizeDelta: {x: 96.16, y: 31.5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &146820284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 146820285}
+  - component: {fileID: 146820289}
+  - component: {fileID: 146820288}
+  - component: {fileID: 146820287}
+  - component: {fileID: 146820286}
+  m_Layer: 0
+  m_Name: dogeBowl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &146820285
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 146820284}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 15.139431, y: 6.45795, z: 1.8013308}
+  m_LocalScale: {x: 0.5, y: 0.027436826, z: 0.49999997}
+  m_Children: []
+  m_Father: {fileID: 1606608855}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &146820286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 146820284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7e5c031499bda449a68214d5c072ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 2
+  interactionTransform: {fileID: 146820285}
+  condictionObjectObject: {fileID: 682642899}
+  subtask: {fileID: 816130985}
+  isOneShotInteraction: 1
+--- !u!23 &146820287
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 146820284}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!136 &146820288
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 146820284}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &146820289
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 146820284}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &149995708
 Prefab:
   m_ObjectHideFlags: 0
@@ -2604,26 +2855,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f2dd6516b6dcc3f4a98f6ea8a8a3d5ad, type: 3}
   m_IsPrefabParent: 0
---- !u!1 &186083796 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100012, guid: f2dd6516b6dcc3f4a98f6ea8a8a3d5ad, type: 3}
-  m_PrefabInternal: {fileID: 186083795}
---- !u!114 &186083797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 186083796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b7e5c031499bda449a68214d5c072ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 3
-  interactionTransform: {fileID: 186083798}
-  condictionObjectObject: {fileID: 0}
-  subtask: {fileID: 0}
-  isOneShotInteraction: 1
 --- !u!4 &186083798 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400012, guid: f2dd6516b6dcc3f4a98f6ea8a8a3d5ad, type: 3}
@@ -2703,7 +2934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Take carrot from the fridge to the pot
   onCompleteObject: {fileID: 1188033717}
-  onCompleteAction: 2
+  onCompleteAction: 1
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
@@ -4392,6 +4623,91 @@ Transform:
   m_Father: {fileID: 1810068164}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &282404434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 282404435}
+  - component: {fileID: 282404438}
+  - component: {fileID: 282404437}
+  - component: {fileID: 282404436}
+  m_Layer: 0
+  m_Name: dogeBowlFinished
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &282404435
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 282404434}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 15.139431, y: 6.45795, z: 1.8013308}
+  m_LocalScale: {x: 0.5, y: 0.027439998, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 1606608855}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &282404436
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 282404434}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 20ea03a92fbc82143b0593aca6bb8f55, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!136 &282404437
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 282404434}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &282404438
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 282404434}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &291545652
 GameObject:
   m_ObjectHideFlags: 0
@@ -6808,7 +7124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Sweep Floor
   onCompleteObject: {fileID: 0}
-  onCompleteAction: 4
+  onCompleteAction: 3
   priorSubTasks: []
   amountToComplete: 3
   amountCompleted: 0
@@ -6837,6 +7153,7 @@ GameObject:
   - component: {fileID: 497053678}
   - component: {fileID: 497053677}
   - component: {fileID: 497053676}
+  - component: {fileID: 497053679}
   m_Layer: 0
   m_Name: dog
   m_TagString: Untagged
@@ -6851,11 +7168,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 497053674}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 12.82, y: 0.79, z: 0.09}
-  m_LocalScale: {x: 0.5117855, y: 0.5117859, z: 0.5117859}
+  m_LocalPosition: {x: 13.497513, y: 6.939607, z: 0.4701733}
+  m_LocalScale: {x: 0.5117855, y: 0.51178616, z: 0.51178616}
   m_Children: []
-  m_Father: {fileID: 1993427994}
-  m_RootOrder: 1
+  m_Father: {fileID: 1606608855}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!23 &497053676
 MeshRenderer:
@@ -6911,6 +7228,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 497053674}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &497053679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 497053674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7e5c031499bda449a68214d5c072ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 1
+  interactionTransform: {fileID: 497053675}
+  condictionObjectObject: {fileID: 0}
+  subtask: {fileID: 89973230}
+  isOneShotInteraction: 1
 --- !u!1 &498797340
 GameObject:
   m_ObjectHideFlags: 0
@@ -7345,7 +7678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Mop Floor
   onCompleteObject: {fileID: 0}
-  onCompleteAction: 4
+  onCompleteAction: 3
   priorSubTasks: []
   amountToComplete: 3
   amountCompleted: 0
@@ -9107,6 +9440,109 @@ Transform:
   m_Father: {fileID: 707366758}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &682642899
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 682642900}
+  - component: {fileID: 682642904}
+  - component: {fileID: 682642903}
+  - component: {fileID: 682642902}
+  - component: {fileID: 682642901}
+  m_Layer: 0
+  m_Name: DogeFood
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &682642900
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 682642899}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.2821226, y: 6.754237, z: 2.047411}
+  m_LocalScale: {x: 0.54868233, y: 0.6858525, z: 0.6858525}
+  m_Children: []
+  m_Father: {fileID: 1711798651}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &682642901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 682642899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ab9ca4277e97940aec21463e6035f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 2
+  interactionTransform: {fileID: 682642900}
+  objectTransform: {fileID: 682642900}
+  dropHeight: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
+  name: DogeFood
+--- !u!23 &682642902
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 682642899}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &682642903
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 682642899}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &682642904
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 682642899}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &684641305
 GameObject:
   m_ObjectHideFlags: 0
@@ -9349,7 +9785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Take chuck chuck from the fridge to the pot
   onCompleteObject: {fileID: 572853153}
-  onCompleteAction: 2
+  onCompleteAction: 1
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
@@ -10866,6 +11302,54 @@ Transform:
   m_Father: {fileID: 400352937}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &816130984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1939799432742554, guid: bbcfafd09e4b9f24984163c67bb29a1e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 816130986}
+  - component: {fileID: 816130985}
+  m_Layer: 0
+  m_Name: Task4Subtask2FillDoge'sBowl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &816130985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 816130984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7debc14e0d9d4f84c99051566372f157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Give that fucking cunt of a dog food to keep my bitch daughter happy
+  onCompleteObject: {fileID: 282404434}
+  onCompleteAction: 0
+  priorSubTasks: []
+  amountToComplete: 1
+  amountCompleted: 0
+--- !u!4 &816130986
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4683372548113366, guid: bbcfafd09e4b9f24984163c67bb29a1e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 816130984}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1956700514}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &822780577
 GameObject:
   m_ObjectHideFlags: 0
@@ -11504,6 +11988,54 @@ Transform:
   m_Father: {fileID: 539910959}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &902538979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1939799432742554, guid: bbcfafd09e4b9f24984163c67bb29a1e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 902538981}
+  - component: {fileID: 902538980}
+  m_Layer: 0
+  m_Name: Task4Subtask3PickUpDogePoopLikeTheBitchYouAre
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &902538980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 902538979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7debc14e0d9d4f84c99051566372f157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Pick Up Doge Poop Like The Bitch You Are
+  onCompleteObject: {fileID: 24448582}
+  onCompleteAction: 1
+  priorSubTasks: []
+  amountToComplete: 1
+  amountCompleted: 0
+--- !u!4 &902538981
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4683372548113366, guid: bbcfafd09e4b9f24984163c67bb29a1e,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 902538979}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1956700514}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &906353431
 GameObject:
   m_ObjectHideFlags: 0
@@ -12001,22 +12533,6 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 64b365dbb968fc84c8dc68c30161a9d2, type: 3}
   m_PrefabInternal: {fileID: 1879156393}
---- !u!114 &944339229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 944339228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b7e5c031499bda449a68214d5c072ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 3
-  interactionTransform: {fileID: 944339231}
-  condictionObjectObject: {fileID: 0}
-  subtask: {fileID: 0}
-  isOneShotInteraction: 1
 --- !u!64 &944339230
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13178,7 +13694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Move sofa into position
   onCompleteObject: {fileID: 0}
-  onCompleteAction: 3
+  onCompleteAction: 2
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
@@ -14423,52 +14939,6 @@ Transform:
   m_Father: {fileID: 280572111}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1149724103
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1420960814075798, guid: bbcfafd09e4b9f24984163c67bb29a1e,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1149724104}
-  - component: {fileID: 1149724105}
-  m_Layer: 0
-  m_Name: Task6
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1149724104
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4325865257796898, guid: bbcfafd09e4b9f24984163c67bb29a1e,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1149724103}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1926432143}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1149724105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1149724103}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a73e619554827ef4190dc4380dbb6c49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  description: Prepare For Dinner
-  subtasks:
-  - {fileID: 0}
-  challengingSubtasks: []
 --- !u!1 &1150303246
 GameObject:
   m_ObjectHideFlags: 0
@@ -16086,7 +16556,7 @@ Transform:
   m_LocalScale: {x: 1.2262558, y: 0.7222, z: 1.93285}
   m_Children: []
   m_Father: {fileID: 1993427994}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1239595345
 MeshRenderer:
@@ -19242,7 +19712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Place bin back
   onCompleteObject: {fileID: 0}
-  onCompleteAction: 3
+  onCompleteAction: 2
   priorSubTasks:
   - {fileID: 2084842553}
   amountToComplete: 1
@@ -20432,6 +20902,10 @@ Transform:
   - {fileID: 1711800789}
   - {fileID: 1309509178}
   - {fileID: 2079682209}
+  - {fileID: 497053675}
+  - {fileID: 146820285}
+  - {fileID: 282404435}
+  - {fileID: 24448583}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21117,7 +21591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Place Plates and Cutlery on Table
   onCompleteObject: {fileID: 0}
-  onCompleteAction: 3
+  onCompleteAction: 2
   priorSubTasks: []
   amountToComplete: 4
   amountCompleted: 0
@@ -21785,7 +22259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Take potatoe from the fridge to the pot
   onCompleteObject: {fileID: 1931167920}
-  onCompleteAction: 2
+  onCompleteAction: 1
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
@@ -22054,6 +22528,7 @@ Transform:
   - {fileID: 278455834}
   - {fileID: 920921895}
   - {fileID: 1252277922}
+  - {fileID: 682642900}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23051,7 +23526,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Move couch into position
   onCompleteObject: {fileID: 0}
-  onCompleteAction: 3
+  onCompleteAction: 2
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
@@ -23183,7 +23658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Bin bottle after the bin is emptied
   onCompleteObject: {fileID: 2007973685}
-  onCompleteAction: 2
+  onCompleteAction: 1
   priorSubTasks:
   - {fileID: 1519405557}
   amountToComplete: 1
@@ -24960,7 +25435,6 @@ Transform:
   - {fileID: 2023048997}
   - {fileID: 1341587770}
   - {fileID: 1956700514}
-  - {fileID: 1149724104}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24981,7 +25455,6 @@ MonoBehaviour:
   - {fileID: 2023048998}
   - {fileID: 1341587771}
   - {fileID: 1956700515}
-  - {fileID: 1149724105}
   activeTasks:
   - {fileID: 976677777}
 --- !u!1 &1927514342
@@ -25353,7 +25826,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 89973231}
+  - {fileID: 816130986}
+  - {fileID: 902538981}
   m_Father: {fileID: 1926432143}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25368,9 +25844,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a73e619554827ef4190dc4380dbb6c49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Check On Dog
+  description: Care for doge
   subtasks:
-  - {fileID: 0}
+  - {fileID: 89973230}
+  - {fileID: 816130985}
+  - {fileID: 902538980}
   challengingSubtasks: []
 --- !u!1 &1957010687
 GameObject:
@@ -25998,7 +26476,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 325613007}
-  - {fileID: 497053675}
   - {fileID: 1239595344}
   - {fileID: 2044687876}
   m_Father: {fileID: 0}
@@ -26567,7 +27044,7 @@ Transform:
   m_LocalScale: {x: 0.7555135, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1993427994}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &2046335098
 RectTransform:
@@ -27216,7 +27693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Empty The Bin
   onCompleteObject: {fileID: 1075414255}
-  onCompleteAction: 2
+  onCompleteAction: 1
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0

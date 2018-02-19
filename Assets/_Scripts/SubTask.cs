@@ -8,6 +8,7 @@ public enum SubTaskAction
     Destroy,
     MakeInteractableVisible,
     MakeInteractableInvisible,
+    Nothing,
 }
 
 public class SubTask : MonoBehaviour {

@@ -56,8 +56,7 @@ public class Interactable : MonoBehaviour
                     float distance = Vector3.Distance(player.transform.position, interactionTransform.position); //Get the distance betweent the player and the object
 
                     if (distance <= radius &&
-                        player.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().
-                        getPickupActionState())                                                                  //If the distance is less than the radius and the player has pressed a button...  player.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().getPickupActionState() returns true if the player has pressed the pick up button
+                        player.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().getInteractionActionState())                                                                  //If the distance is less than the radius and the player has pressed a button...  player.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().getPickupActionState() returns true if the player has pressed the pick up button
                     {
                         //Debug.Log ("Hello");
                         //Get the object the player is holding

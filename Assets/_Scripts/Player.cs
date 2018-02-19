@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
 	private int BTC_Current = 0; //current value of the bar
 	private int BTC_Max; //Max value of the bar
 	public int playerNum;
-	public string holding;
+	public string holding = "";
 
 
     void Start()

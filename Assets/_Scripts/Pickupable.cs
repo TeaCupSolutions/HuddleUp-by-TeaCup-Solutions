@@ -29,7 +29,7 @@ public class Pickupable : MonoBehaviour
 		AM=sound.GetComponent<AudioManager>();
 	}
 
-    void Update()                                                                                            //This will run repeatedly until the game ends
+    void FixedUpdate()                                                                                            //This will run repeatedly until the game ends
     {
         if (!objectIsPickedUp)                                                                               //If the object is not picked up...
         {

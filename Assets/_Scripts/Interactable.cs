@@ -32,7 +32,7 @@ public class Interactable : MonoBehaviour
 		//Debug.Log ("Condiction Object is: " + condictionObject);
 	}
 	
-	void FixedUpdate ()
+	void Update ()
 	{
         if (!isFinished)
         {

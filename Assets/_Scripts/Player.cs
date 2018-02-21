@@ -98,7 +98,6 @@ public class Player : MonoBehaviour
     {
         //update Leadership bar
         UpdateHUD();
-		Debug.Log("Player Speed: ");
     }
 
     private void UpdateHUD()

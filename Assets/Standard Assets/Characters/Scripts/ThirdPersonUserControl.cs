@@ -36,7 +36,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         public Transform m_Cam;
         private Vector3 m_CamForward;
         private Vector3 m_Move;
-        private bool m_Jump, m_Crouch, m_hasFixedUpdateRun = true;
+        private bool m_Jump, m_Crouch, m_IsInputReady = false;
         private bool m_PickupAction;
         private bool m_InteractAction;
         private float m_h = 0, m_v = 0;
@@ -83,68 +83,61 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void Update()
         {
-            if (!StaticValues.IsReplay) {
-                if (m_hasFixedUpdateRun)
+                if (StaticValues.IsReplay)
                 {
-                    m_Crouch = false;
-                    m_PickupAction = false;
-                    m_InteractAction = false;
-                    m_Jump = false;
-                    m_hasFixedUpdateRun = false;
-                    m_h = 0;
-                    m_v = 0;
-                }
-
-                m_Crouch = Input.GetButtonDown("P" + this.player + "_Crouch");
-                m_PickupAction = Input.GetButtonDown("P" + this.player + "_Pickup");
-                m_InteractAction = Input.GetButtonDown("P" + this.player + "_Interact");
-                m_Jump = Input.GetButtonDown("P" + this.player + "_Jump");
-                m_h = Input.GetAxis("P" + this.player + "_Horizontal");
-                m_v = Input.GetAxis("P" + this.player + "_Vertical");
-
-                if (m_Cam != null)
-                {
-                    // calculate camera relative direction to move:
-                    m_CamForward = Vector3.Scale(m_Cam.forward, new Vector3(1, 0, 1)).normalized;
-                    m_Move = m_v * m_CamForward + m_h * m_Cam.right;
+                    if (Time.timeScale == 0) return;
+                    var line = m_sr.ReadLine();
+                    if (line != null)
+                    {
+                        String[] inputs = line.Split('|');
+                        m_Move.x = float.Parse(inputs[1]);
+                        m_Move.y = float.Parse(inputs[2]);
+                        m_Move.z = float.Parse(inputs[3]);
+                        m_Crouch = (inputs[4] == "True");
+                        m_Jump = (inputs[5] == "True");
+                        m_PickupAction = (inputs[6] == "True");
+                        m_InteractAction = (inputs[7] == "True");
+                    }
+                    else
+                    {
+                        StartCoroutine(WaitBeforeExit(5));
+                    }
                 }
                 else
                 {
-                    // we use world-relative directions in the case of no main camera
-                    m_Move = m_v * Vector3.forward + m_h * Vector3.right;
+                    // read inputs
+                    float h = Input.GetAxis("P" + this.player + "_Horizontal");
+                    float v = Input.GetAxis("P" + this.player + "_Vertical");
+                    m_Crouch = Input.GetButtonDown("P" + this.player + "_Crouch");
+                    m_PickupAction = Input.GetButtonDown("P" + this.player + "_Pickup");
+                    m_InteractAction = Input.GetButtonDown("P" + this.player + "_Interact");
+                // calculate move direction to pass to character
+                if (m_Cam != null)
+                    {
+                        // calculate camera relative direction to move:
+                        m_CamForward = Vector3.Scale(m_Cam.forward, new Vector3(1, 0, 1)).normalized;
+                        m_Move = v * m_CamForward + h * m_Cam.right;
+                    }
+                    else
+                    {
+                        // we use world-relative directions in the case of no main camera
+                        m_Move = v * Vector3.forward + h * Vector3.right;
+                    }
+
+                    if (!m_Jump)
+                    {
+                        m_Jump = Input.GetButtonDown("P" + this.player + "_Jump");
+                    }
+
+                    m_sw.WriteLine(this.player + "|" + m_Move.x + "|" + m_Move.y + "|" + m_Move.z + "|" + m_Crouch + "|" + m_Jump + "|" + m_PickupAction + "|" + m_InteractAction);
                 }
-            }
+            m_Character.Move(m_Move, m_Crouch, m_Jump);
         }
 
 
         // Fixed update is called in sync with physics
         private void FixedUpdate()
         {
-            if (StaticValues.IsReplay)
-            {
-                var line = m_sr.ReadLine();
-                if (line != null)
-                {
-                    String[] inputs = line.Split('|');
-                    m_Move.x = float.Parse(inputs[1]);
-                    m_Move.y = float.Parse(inputs[2]);
-                    m_Move.z = float.Parse(inputs[3]);
-                    m_Crouch = (inputs[4] == "True");
-                    m_Jump = (inputs[5] == "True");
-                    m_PickupAction = (inputs[6] == "True");
-                    m_InteractAction = (inputs[7] == "True");
-                }
-                else
-                {
-                    StartCoroutine(WaitBeforeExit(5));
-                }
-            }
-            else
-            {
-                m_sw.WriteLine(this.player + "|" + m_Move.x + "|" + m_Move.y + "|" + m_Move.z + "|" + m_Crouch + "|" + m_Jump + "|" + m_PickupAction + "|" + m_InteractAction);
-            }
-            m_Character.Move(m_Move, m_Crouch, m_Jump);
-            m_hasFixedUpdateRun = true;
         }
 
         void OnDestroy()

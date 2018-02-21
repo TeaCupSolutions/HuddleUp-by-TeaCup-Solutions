@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TaskManager : MonoBehaviour {
 
 	public List<Task> tasks = new List<Task> ();
 	public List<Task> activeTasks = new List<Task> ();
-
+	public TMP_Text title, subtasks;
 
 	// Use this for initialization
 	void Start () {
@@ -55,6 +56,9 @@ public class TaskManager : MonoBehaviour {
 			}
 
 		}
+
+		title.text = activeTasks[0].description;
+		subtasks.text = activeTasks[0].subtasksToString();
 		
 	}
 

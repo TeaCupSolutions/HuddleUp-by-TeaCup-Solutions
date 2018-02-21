@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Task : MonoBehaviour {
     public string description;
-    bool isCompleted;
+    public bool isCompleted = false;
     bool isActive;
     public List<SubTask> subtasks;
     public List<SubTask> challengingSubtasks;
@@ -33,7 +33,6 @@ public class Task : MonoBehaviour {
             foreach (SubTask subTask in subtasks) {
                 if (!subTask.IsCompleted) {
                     taskStatus = false;
-                    break;
                 }
             }
             if (taskStatus) {
@@ -41,5 +40,18 @@ public class Task : MonoBehaviour {
             }
             this.IsCompleted = taskStatus;
         }
+	}
+	public string subtasksToString() {
+		string output = "";
+		int count = 1;
+		foreach (SubTask s in subtasks) {
+			if (s.IsCompleted) {
+				output += "<s>" + count + ". <indent=10%>" + s.description + "</indent></s>\n";
+			} else {
+				output += count + ". <indent=10%>" + s.description + "</indent>\n";
+			}
+			count++;
+		}
+		return output;
 	}
 }

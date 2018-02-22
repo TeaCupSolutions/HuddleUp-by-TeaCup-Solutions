@@ -84,4 +84,8 @@ public class OptionsMenu : MonoBehaviour {
         Screen.fullScreen = isFullscreen;
 		AM.Play("click");
     }
+	public void backClick()
+	{
+		AM.Play("click");
+	}
 }

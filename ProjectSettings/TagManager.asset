@@ -7,6 +7,19 @@ TagManager:
   - AudioManager
   - chair
   - couch
+  - plate
+  - dogfood
+  - tMopFloor
+  - bin
+  - tMoveSeat
+  - tBottleDropBin
+  - tChairDrop
+  - tPlateDrop
+  - tMixIngrediant
+  - tPotDropTable
+  - tPetDog
+  - tDogFoodDropBowl
+  - tPoopPickUp
   layers:
   - Default
   - TransparentFX

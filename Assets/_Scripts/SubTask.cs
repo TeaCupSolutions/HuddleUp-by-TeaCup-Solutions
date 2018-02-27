@@ -20,6 +20,8 @@ public class SubTask : MonoBehaviour {
     public int amountCompleted = 0;
     bool isCompleted;
     private bool runTask = true;
+	public	GameObject sound;
+	public	AudioManager AM;
 
     public bool IsCompleted
     {
@@ -30,6 +32,8 @@ public class SubTask : MonoBehaviour {
 
     public void CompletedIntercation(bool isCompleted, Interactable interctable, GameObject obj)
     {
+		sound=GameObject.FindGameObjectWithTag("AudioManager");
+		AM=sound.GetComponent<AudioManager>();
         //will be set to completion on interaction
         if (priorSubTasks.Count != 0) {
             runTask = true;
@@ -43,6 +47,8 @@ public class SubTask : MonoBehaviour {
         }
 
         if (runTask) {
+			if(this.tag=="tMopFloor")
+				AM.Play("mop");
             amountCompleted++;
             this.HandleCompletion(interctable, obj);
 

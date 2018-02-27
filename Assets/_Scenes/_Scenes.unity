@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44962835, g: 0.49969935, b: 0.5756568, a: 1}
+  m_IndirectSpecularColor: {r: 0.449628, g: 0.49969918, b: 0.57565624, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -929,7 +929,7 @@ GameObject:
   - component: {fileID: 89973230}
   m_Layer: 0
   m_Name: Task5Subtask1PetDoge
-  m_TagString: Untagged
+  m_TagString: tPetDog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -951,6 +951,8 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
+  sound: {fileID: 0}
+  AM: {fileID: 0}
 --- !u!4 &89973231
 Transform:
   m_ObjectHideFlags: 0
@@ -2015,7 +2017,7 @@ GameObject:
   - component: {fileID: 120476995}
   m_Layer: 0
   m_Name: Task4Subtask2PutPotOnTable
-  m_TagString: Untagged
+  m_TagString: tPotDropTable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2051,6 +2053,8 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
+  sound: {fileID: 0}
+  AM: {fileID: 0}
 --- !u!1 &130265926
 GameObject:
   m_ObjectHideFlags: 0
@@ -2063,7 +2067,7 @@ GameObject:
   - component: {fileID: 130265928}
   m_Layer: 0
   m_Name: Task3Subtask1MoveChairs
-  m_TagString: Untagged
+  m_TagString: tChairDrop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2099,6 +2103,8 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 4
   amountCompleted: 0
+  sound: {fileID: 0}
+  AM: {fileID: 0}
 --- !u!1 &131555069
 GameObject:
   m_ObjectHideFlags: 0
@@ -2804,7 +2810,7 @@ GameObject:
   - component: {fileID: 180419876}
   m_Layer: 0
   m_Name: plate2
-  m_TagString: Untagged
+  m_TagString: plate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3086,7 +3092,7 @@ GameObject:
   - component: {fileID: 191045966}
   m_Layer: 0
   m_Name: Task4Subtask1TakeCarrotToPot
-  m_TagString: Untagged
+  m_TagString: tMixIngrediant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3122,6 +3128,8 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
+  sound: {fileID: 0}
+  AM: {fileID: 0}
 --- !u!1 &191850095
 GameObject:
   m_ObjectHideFlags: 0
@@ -3211,8 +3219,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 191850095}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 960, y: 540, z: 0}
-  m_LocalScale: {x: 2.4, y: 2.4, z: 2.4}
+  m_LocalPosition: {x: 408.5, y: 163, z: 0}
+  m_LocalScale: {x: 1.02125, y: 1.02125, z: 1.02125}
   m_Children:
   - {fileID: 262514719}
   - {fileID: 1196082296}
@@ -3748,7 +3756,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 197742086}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.8, y: -28.999998, z: 0}
+  m_LocalPosition: {x: -16.8, y: -29, z: 0}
   m_LocalScale: {x: 1, y: 9.999637, z: 1}
   m_Children: []
   m_Father: {fileID: 498797341}
@@ -3986,7 +3994,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 223546999}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.3, y: -28.999998, z: 0}
+  m_LocalPosition: {x: -16.3, y: -29, z: 0}
   m_LocalScale: {x: 1, y: 9.999637, z: 1}
   m_Children: []
   m_Father: {fileID: 1100503023}
@@ -4186,7 +4194,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 246486757}
-  m_LocalRotation: {x: 0.5326752, y: 0.070340455, z: 0.83613276, w: -0.110415146}
+  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
   m_LocalPosition: {x: 0.000022271464, y: -0.00006150465, z: 0.026027026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4352,7 +4360,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 256565517}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.5, y: -30.000002, z: 0}
+  m_LocalPosition: {x: -25.499998, y: -29.999998, z: 0}
   m_LocalScale: {x: 1, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 80825536}
@@ -4474,7 +4482,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 262514718}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -299.99997, y: 194.99998, z: 0}
+  m_LocalPosition: {x: -300, y: 129.60832, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 191850099}
@@ -6792,7 +6800,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 451383420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.5, y: -30.000002, z: 0}
+  m_LocalPosition: {x: -25.499998, y: -29.999998, z: 0}
   m_LocalScale: {x: 1, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 2054775279}
@@ -7201,7 +7209,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 470209399}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 269.99997, y: -104.999985, z: 0}
+  m_LocalPosition: {x: 270, y: -39.608322, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 191850099}
@@ -7566,7 +7574,7 @@ GameObject:
   - component: {fileID: 495146369}
   m_Layer: 0
   m_Name: Task2Subtask3SweepFloor
-  m_TagString: Untagged
+  m_TagString: tMopFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7588,6 +7596,8 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 3
   amountCompleted: 0
+  sound: {fileID: 0}
+  AM: {fileID: 0}
 --- !u!4 &495146370
 Transform:
   m_ObjectHideFlags: 0
@@ -7971,7 +7981,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 511743478}
-  m_LocalRotation: {x: 0.5326752, y: 0.070340455, z: 0.83613276, w: -0.110415146}
+  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
   m_LocalPosition: {x: 0.000022271464, y: -0.00006150465, z: 0.026027026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8106,7 +8116,7 @@ GameObject:
   - component: {fileID: 527842536}
   m_Layer: 0
   m_Name: Task1Subtask1MopFloor
-  m_TagString: Untagged
+  m_TagString: tMopFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8142,6 +8152,8 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 3
   amountCompleted: 0
+  sound: {fileID: 0}
+  AM: {fileID: 0}
 --- !u!1 &535107420
 GameObject:
   m_ObjectHideFlags: 0
@@ -10037,7 +10049,7 @@ GameObject:
   - component: {fileID: 682642901}
   m_Layer: 0
   m_Name: DogeFood
-  m_TagString: Untagged
+  m_TagString: dogfood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10336,7 +10348,7 @@ GameObject:
   - component: {fileID: 706321969}
   m_Layer: 0
   m_Name: Task4Subtask1TakeChickenToPot
-  m_TagString: Untagged
+  m_TagString: tMixIngrediant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10372,6 +10384,8 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
+  sound: {fileID: 0}
+  AM: {fileID: 0}
 --- !u!1 &707366757
 GameObject:
   m_ObjectHideFlags: 0
@@ -10544,7 +10558,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 719517425}
-  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
+  m_LocalRotation: {x: 0.5326752, y: 0.070340455, z: 0.83613276, w: -0.110415146}
   m_LocalPosition: {x: 0.000022271464, y: -0.00006150465, z: 0.026027026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -10576,7 +10590,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 722411825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: -259.81198, z: 0}
+  m_LocalPosition: {x: 3, y: -194.42032, z: 0}
   m_LocalScale: {x: 0.9317157, y: 0.9317161, z: 0.9317161}
   m_Children:
   - {fileID: 535107421}
@@ -11875,7 +11889,7 @@ GameObject:
   - component: {fileID: 811835910}
   m_Layer: 0
   m_Name: Task4Subtask2CookChuckChuckSoup
-  m_TagString: Untagged
+  m_TagString: tMixIngrediant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11914,6 +11928,8 @@ MonoBehaviour:
   - {fileID: 706321969}
   amountToComplete: 1
   amountCompleted: 0
+  sound: {fileID: 0}
+  AM: {fileID: 0}
 --- !u!1 &813267411
 GameObject:
   m_ObjectHideFlags: 0
@@ -11986,7 +12002,7 @@ GameObject:
   - component: {fileID: 816130985}
   m_Layer: 0
   m_Name: Task4Subtask2FillDoge'sBowl
-  m_TagString: Untagged
+  m_TagString: tDogFoodDropBowl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12008,6 +12024,8 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
+  sound: {fileID: 0}
+  AM: {fileID: 0}
 --- !u!4 &816130986
 Transform:
   m_ObjectHideFlags: 0
@@ -12672,7 +12690,7 @@ GameObject:
   - component: {fileID: 902538980}
   m_Layer: 0
   m_Name: Task4Subtask3PickUpDogePoopLikeTheBitchYouAre
-  m_TagString: Untagged
+  m_TagString: tPoopPickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12694,6 +12712,8 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
+  sound: {fileID: 0}
+  AM: {fileID: 0}
 --- !u!4 &902538981
 Transform:
   m_ObjectHideFlags: 0
@@ -13033,7 +13053,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 928128419}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -343, y: -187.74998, z: 0}
+  m_LocalPosition: {x: -343, y: -122.35832, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1965914499}
@@ -13675,7 +13695,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 991849041}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -299.99997, y: -104.999985, z: 0}
+  m_LocalPosition: {x: -300, y: -39.608322, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 191850099}
@@ -14610,7 +14630,7 @@ GameObject:
   - component: {fileID: 1050743053}
   m_Layer: 0
   m_Name: Task2Subtask1Sofa
-  m_TagString: Untagged
+  m_TagString: tMoveSeat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14646,6 +14666,8 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
+  sound: {fileID: 0}
+  AM: {fileID: 0}
 --- !u!1 &1057348337
 GameObject:
   m_ObjectHideFlags: 0
@@ -14968,7 +14990,7 @@ GameObject:
   - component: {fileID: 1075414256}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: bin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15053,7 +15075,7 @@ GameObject:
   - component: {fileID: 1088825296}
   m_Layer: 0
   m_Name: plate3
-  m_TagString: Untagged
+  m_TagString: plate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16156,6 +16178,9 @@ MonoBehaviour:
   - cutting
   - washDishes
   - waterDrop
+  - dogfooddrop
+  - dogplay
+  - pooppickup
   audioClip:
   - {fileID: 8300000, guid: ec41cfb0cef6d974b916cdf3a6e90488, type: 3}
   - {fileID: 8300000, guid: ba7f4a1497854ce4687a14e4cefc65fc, type: 3}
@@ -16179,6 +16204,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9589a0eddda3deb4d8d38ef6e656fa47, type: 3}
   - {fileID: 8300000, guid: 736878221ca97f04aadf99faa09a87fe, type: 3}
   - {fileID: 8300000, guid: 8614e1aace6dd424f8897f88f9d263fb, type: 3}
+  - {fileID: 8300000, guid: 4df0d1a7f39a0bf44bc25a8cf559ab16, type: 3}
+  - {fileID: 8300000, guid: 72c3febe24fc0b74d9037477f86f69db, type: 3}
+  - {fileID: 8300000, guid: 634d005228f4fd64c8f26ed5666c0127, type: 3}
   clipFound: 0
 --- !u!4 &1154336739
 Transform:
@@ -16869,7 +16897,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1196082295}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 269.99997, y: 194.99998, z: 0}
+  m_LocalPosition: {x: 270, y: 129.60832, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 191850099}
@@ -16943,7 +16971,7 @@ GameObject:
   - component: {fileID: 1200740899}
   m_Layer: 0
   m_Name: plate1
-  m_TagString: Untagged
+  m_TagString: plate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19928,7 +19956,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1412290844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.5, y: -30.000002, z: 0}
+  m_LocalPosition: {x: -25.499998, y: -29.999998, z: 0}
   m_LocalScale: {x: 1, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 1540544943}
@@ -20016,7 +20044,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1415254626}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -399.99997, y: 224.99998, z: 0}
+  m_LocalPosition: {x: -400, y: 159.60832, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1699399396}
@@ -20389,7 +20417,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1464617622}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.8, y: -28.999998, z: 0}
+  m_LocalPosition: {x: -16.8, y: -29, z: 0}
   m_LocalScale: {x: 1, y: 9.999637, z: 1}
   m_Children: []
   m_Father: {fileID: 979833902}
@@ -20929,6 +20957,8 @@ MonoBehaviour:
   - {fileID: 2084842553}
   amountToComplete: 1
   amountCompleted: 0
+  sound: {fileID: 0}
+  AM: {fileID: 0}
 --- !u!4 &1519405558
 Transform:
   m_ObjectHideFlags: 0
@@ -21364,7 +21394,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1547401901}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -233, y: -187.74998, z: 0}
+  m_LocalPosition: {x: -233, y: -122.35832, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2054775279}
@@ -21441,7 +21471,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1547947987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.5, y: -30.000002, z: 0}
+  m_LocalPosition: {x: -25.499998, y: -29.999998, z: 0}
   m_LocalScale: {x: 1, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 1965914499}
@@ -21564,7 +21594,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1548453793}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 237, y: -187.74998, z: 0}
+  m_LocalPosition: {x: 237, y: -122.35832, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 80825536}
@@ -22543,7 +22573,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1628245745}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 346.25418, y: -187.74998, z: 0}
+  m_LocalPosition: {x: 346.25418, y: -122.35832, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1540544943}
@@ -22607,7 +22637,7 @@ GameObject:
   - component: {fileID: 1630627240}
   m_Layer: 0
   m_Name: plate0
-  m_TagString: Untagged
+  m_TagString: plate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22957,7 +22987,7 @@ GameObject:
   - component: {fileID: 1656751314}
   m_Layer: 0
   m_Name: Task3Subtask1PlaceCutleryOut
-  m_TagString: Untagged
+  m_TagString: tPlateDrop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22993,6 +23023,8 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 4
   amountCompleted: 0
+  sound: {fileID: 0}
+  AM: {fileID: 0}
 --- !u!1 &1658449748
 GameObject:
   m_ObjectHideFlags: 0
@@ -23639,7 +23671,7 @@ GameObject:
   - component: {fileID: 1691459100}
   m_Layer: 0
   m_Name: Task4Subtask1TakePotatoeToPot
-  m_TagString: Untagged
+  m_TagString: tMixIngrediant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23661,6 +23693,8 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
+  sound: {fileID: 0}
+  AM: {fileID: 0}
 --- !u!4 &1691459101
 Transform:
   m_ObjectHideFlags: 0
@@ -25084,7 +25118,7 @@ GameObject:
   - component: {fileID: 1778751422}
   m_Layer: 0
   m_Name: Task2Subtask2Couch
-  m_TagString: Untagged
+  m_TagString: tMoveSeat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25120,6 +25154,8 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
+  sound: {fileID: 0}
+  AM: {fileID: 0}
 --- !u!1 &1779246833
 GameObject:
   m_ObjectHideFlags: 0
@@ -25230,7 +25266,7 @@ GameObject:
   - component: {fileID: 1782633333}
   m_Layer: 0
   m_Name: Task3Subtask4BinBottle
-  m_TagString: Untagged
+  m_TagString: tBottleDropBin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25253,6 +25289,8 @@ MonoBehaviour:
   - {fileID: 1519405557}
   amountToComplete: 1
   amountCompleted: 0
+  sound: {fileID: 0}
+  AM: {fileID: 0}
 --- !u!4 &1782633334
 Transform:
   m_ObjectHideFlags: 0
@@ -26444,7 +26482,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1869111784}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.599998, y: -28.999998, z: 0}
+  m_LocalPosition: {x: -16.600002, y: -29, z: 0}
   m_LocalScale: {x: 1, y: 9.999637, z: 1}
   m_Children: []
   m_Father: {fileID: 908902513}
@@ -27776,6 +27814,10 @@ Prefab:
     - target: {fileID: 1000012081721328, guid: 6a820aef5b4bbe449826505731f23459, type: 2}
       propertyPath: m_Name
       value: TrashCan
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012081721328, guid: 6a820aef5b4bbe449826505731f23459, type: 2}
+      propertyPath: m_TagString
+      value: bin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a820aef5b4bbe449826505731f23459, type: 2}
@@ -29477,6 +29519,8 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
+  sound: {fileID: 0}
+  AM: {fileID: 0}
 --- !u!1 &2089433840
 GameObject:
   m_ObjectHideFlags: 0
@@ -29561,7 +29605,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2098081270}
-  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
+  m_LocalRotation: {x: 0.5326752, y: 0.070340455, z: 0.83613276, w: -0.110415146}
   m_LocalPosition: {x: 0.000022271464, y: -0.00006150465, z: 0.026027026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

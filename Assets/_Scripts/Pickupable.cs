@@ -50,6 +50,8 @@ public class Pickupable : MonoBehaviour
 						AM.Play("chairPickUp");
 					else if(this.tag=="couch")
 						AM.Play("couchPickUp");
+					else if(this.tag=="bin")
+						AM.Play("binPickUp");
 					else
 						AM.Play("pickup");
 					break;
@@ -69,6 +71,10 @@ public class Pickupable : MonoBehaviour
 				AM.Play("chairDrop");
 			else if(this.tag=="couch")
 				AM.Play("couchDrop");
+			else if(this.tag=="bin")
+				AM.Play("binDrop");
+			else if(this.tag=="plate")
+				AM.Play("plateDrop");
 			else
 				AM.Play("drop");
         }

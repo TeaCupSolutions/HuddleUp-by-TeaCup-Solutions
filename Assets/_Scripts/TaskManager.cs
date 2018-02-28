@@ -7,7 +7,7 @@ public class TaskManager : MonoBehaviour {
 
 	public List<Task> tasks = new List<Task> ();
 	public List<Task> activeTasks = new List<Task> ();
-	public TMP_Text title, subtasks;
+    public TMP_Text title, subtasks, title1, subtasks2;
 
 	// Use this for initialization
 	void Start () {
@@ -37,30 +37,30 @@ public class TaskManager : MonoBehaviour {
 
 		//if we found something completed, remove it from the list
 		if (remove != -1) {
-			
-			activeTasks.RemoveAt (remove);
-			activeTasks.TrimExcess (); //might not work....
-
-			//add new task to the list
-
-			//for each task in our task list
 			foreach (Task nextTask in tasks) {
 				
 				//if task is not completed yet
 				if (!nextTask.IsCompleted) {
 
 					//add that task to the active task list
-					activeTasks.Add(nextTask);
+					activeTasks[remove] = nextTask;
 					break;
 				}
 			}
 
 		}
 
-		title.text = activeTasks[0].description;
-		subtasks.text = activeTasks[0].subtasksToString();
-		
-	}
+        if (activeTasks[0])
+        {
+            title.text = activeTasks[0].description;
+            subtasks.text = activeTasks[0].subtasksToString();
+        } else if (activeTasks[1])
+        {
+            title1.text = activeTasks[1].description;
+            subtasks2.text = activeTasks[1].subtasksToString();
+        }
+
+    }
 
 	int checkWin(){
 

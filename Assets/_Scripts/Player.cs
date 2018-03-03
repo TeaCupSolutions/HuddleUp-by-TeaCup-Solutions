@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
 {
     public Text UIText;
 	public RectTransform HUD_Leadership, HUD_Communication, HUD_Creativity, HUD_BTC;
+    public Material playerMaterial;
+    public ParticleSystem notifier;
 
     //Leadership HUD Variables
     private float HUD_Leadership_Y; //stores the Y Position of the bar
@@ -33,12 +35,14 @@ public class Player : MonoBehaviour
 	private int BTC_Max; //Max value of the bar
 	public int playerNum;
 	public string holding = "";
+    public Color colour = Color.cyan;
 
 
     void Start()
     {
+        notifier.Stop();
         //initialize HUD values
-		HUD_Leadership_Y = HUD_Leadership.localPosition.y;
+        HUD_Leadership_Y = HUD_Leadership.localPosition.y;
 		HUD_Leadership_MAX_X = HUD_Leadership.localPosition.x; // Max position is it's starting position
 		HUD_Leadership_MIN_X = HUD_Leadership.localPosition.x - HUD_Leadership.rect.width; // Min position is our max position - bar width
 
@@ -66,7 +70,7 @@ public class Player : MonoBehaviour
 
         //set bar to min position
         //HUD_Leadership.position = new Vector3(HUD_Leadership_MIN_X, HUD_Leadership_Y);
-
+        playerMaterial.color = colour;
     }
 
 
@@ -77,20 +81,29 @@ public class Player : MonoBehaviour
 
     public void IncrementBasedOnID(int identifier)
     {
+        var main = notifier.main;
         if (identifier == 1) {
 			this.Communication_Current += 1;
+            main.startColor = new Color(180/255f, 209 / 255f, 58 / 255f);
+            notifier.Play();
         }
         else if (identifier == 2)
         {
 			this.Leadership_Current++;
+            main.startColor = new Color(23 / 255f, 169 / 255f, 187 / 255f);
+            notifier.Play();
         }
         else if (identifier == 3)
         {
 			this.Creativity_Current += 1;
+            main.startColor = new Color(139 / 255f, 87 / 255f, 126 / 255f);
+            notifier.Play();
         }
         else if (identifier == 4)
         {
 			this.BTC_Current += 1;
+            main.startColor = new Color(232 / 255f, 114 / 255f, 49 / 255f);
+            notifier.Play();
         }
     }
 

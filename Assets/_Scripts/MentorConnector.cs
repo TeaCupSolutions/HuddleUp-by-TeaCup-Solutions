@@ -21,7 +21,7 @@ public class MentorConnector : MonoBehaviour
     {
         if (isAtStartup)
         {
-            NetworkServer.Listen(50000);
+            NetworkServer.Listen(8888);
             isAtStartup = false;
         }
     }

@@ -41,7 +41,10 @@ public class Task : MonoBehaviour {
             this.IsCompleted = taskStatus;
         }
 	}
-	public string subtasksToString() {
+
+
+	public string subtasksToString() 
+	{
 		string output = "";
 		int count = 1;
 		foreach (SubTask s in subtasks) {

@@ -224,6 +224,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 0}
   subtask: {fileID: 902538980}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!23 &24448585
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1132,6 +1133,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 995067795}
   subtask: {fileID: 495146369}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!23 &96051854
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2593,6 +2595,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 682642899}
   subtask: {fileID: 816130985}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!23 &146820287
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3221,6 +3224,7 @@ MonoBehaviour:
   radius: 2.5
   interactionTransform: {fileID: 180419875}
   objectTransform: {fileID: 180419875}
+  positionPointer: {fileID: 0}
   dropHeight: 1
   sound: {fileID: 0}
   AM: {fileID: 0}
@@ -3954,6 +3958,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 995067795}
   subtask: {fileID: 527842536}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!23 &194522066
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4109,6 +4114,7 @@ MonoBehaviour:
   radius: 2
   interactionTransform: {fileID: 195674168}
   objectTransform: {fileID: 195674168}
+  positionPointer: {fileID: 0}
   dropHeight: 2
   sound: {fileID: 0}
   AM: {fileID: 0}
@@ -4699,7 +4705,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 246486757}
-  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
+  m_LocalRotation: {x: 0.5326752, y: 0.070340455, z: 0.83613276, w: -0.110415146}
   m_LocalPosition: {x: 0.000022271464, y: -0.00006150465, z: 0.026027026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6441,6 +6447,7 @@ MonoBehaviour:
   radius: 3
   interactionTransform: {fileID: 376471478}
   objectTransform: {fileID: 376471478}
+  positionPointer: {fileID: 0}
   dropHeight: 0
   sound: {fileID: 0}
   AM: {fileID: 0}
@@ -6772,6 +6779,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 1200740897}
   subtask: {fileID: 1656751314}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!65 &412765906
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7436,6 +7444,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 995067795}
   subtask: {fileID: 527842536}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!23 &451197925
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8008,6 +8017,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 195674169}
   subtask: {fileID: 1778751422}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!1 &470209399
 GameObject:
   m_ObjectHideFlags: 0
@@ -8287,6 +8297,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 1216242272}
   subtask: {fileID: 130265928}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!1 &482270175
 GameObject:
   m_ObjectHideFlags: 0
@@ -8335,6 +8346,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 995067795}
   subtask: {fileID: 495146369}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!23 &482270178
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8626,6 +8638,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 0}
   subtask: {fileID: 89973230}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!114 &497053680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8962,7 +8975,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 511743478}
-  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
+  m_LocalRotation: {x: 0.5326752, y: 0.070340455, z: 0.83613276, w: -0.110415146}
   m_LocalPosition: {x: 0.000022271464, y: -0.00006150465, z: 0.026027026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -13752,6 +13765,7 @@ MonoBehaviour:
   radius: 2
   interactionTransform: {fileID: 571914161}
   objectTransform: {fileID: 571914161}
+  positionPointer: {fileID: 1923257799}
   dropHeight: 1
   sound: {fileID: 0}
   AM: {fileID: 0}
@@ -13802,6 +13816,7 @@ MonoBehaviour:
   radius: 2
   interactionTransform: {fileID: 572853154}
   objectTransform: {fileID: 572853154}
+  positionPointer: {fileID: 0}
   dropHeight: 1
   sound: {fileID: 0}
   AM: {fileID: 0}
@@ -14241,6 +14256,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 652719920}
   subtask: {fileID: 130265928}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!1001 &604451003
 Prefab:
   m_ObjectHideFlags: 0
@@ -15012,6 +15028,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 1095586389}
   subtask: {fileID: 1050743053}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!4 &635660999 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000013334804512, guid: 259a67416db11244081bfa0efad72aee,
@@ -15216,10 +15233,82 @@ MonoBehaviour:
   radius: 2
   interactionTransform: {fileID: 652719919}
   objectTransform: {fileID: 652719919}
+  positionPointer: {fileID: 654421963}
   dropHeight: 1
   sound: {fileID: 0}
   AM: {fileID: 0}
   name: chair3
+--- !u!1 &654421963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 654421964}
+  - component: {fileID: 654421966}
+  - component: {fileID: 654421965}
+  m_Layer: 0
+  m_Name: Chair3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &654421964
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 654421963}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.08, y: 6.792, z: 2.68}
+  m_LocalScale: {x: 0.23502396, y: 0.23502398, z: 0.23502398}
+  m_Children: []
+  m_Father: {fileID: 871313508}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &654421965
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 654421963}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &654421966
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 654421963}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &677376636
 GameObject:
   m_ObjectHideFlags: 0
@@ -15358,6 +15447,7 @@ MonoBehaviour:
   radius: 2
   interactionTransform: {fileID: 682642900}
   objectTransform: {fileID: 682642900}
+  positionPointer: {fileID: 0}
   dropHeight: 1
   sound: {fileID: 0}
   AM: {fileID: 0}
@@ -16347,7 +16437,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 719517425}
-  m_LocalRotation: {x: 0.5326752, y: 0.070340455, z: 0.83613276, w: -0.110415146}
+  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
   m_LocalPosition: {x: 0.000022271464, y: -0.00006150465, z: 0.026027026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -17634,6 +17724,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 1630627238}
   subtask: {fileID: 1656751314}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!65 &806330997
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18448,6 +18539,38 @@ Transform:
   m_Father: {fileID: 1121115304}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &871313507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 871313508}
+  m_Layer: 0
+  m_Name: Identifiers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &871313508
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 871313507}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 654421964}
+  - {fileID: 1265493281}
+  - {fileID: 2136861430}
+  - {fileID: 1923257800}
+  m_Father: {fileID: 1606608855}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &875349739
 GameObject:
   m_ObjectHideFlags: 0
@@ -19242,6 +19365,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 1960490036}
   subtask: {fileID: 1519405557}
   isOneShotInteraction: 0
+  totalTimeForInteraction: 100
 --- !u!64 &945989932
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19272,6 +19396,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 2007973685}
   subtask: {fileID: 1782633333}
   isOneShotInteraction: 0
+  totalTimeForInteraction: 100
 --- !u!1 &946904384
 GameObject:
   m_ObjectHideFlags: 0
@@ -19886,6 +20011,7 @@ MonoBehaviour:
   radius: 3
   interactionTransform: {fileID: 995067800}
   objectTransform: {fileID: 995067800}
+  positionPointer: {fileID: 0}
   dropHeight: 0.2
   sound: {fileID: 0}
   AM: {fileID: 0}
@@ -25021,6 +25147,7 @@ MonoBehaviour:
   radius: 2.5
   interactionTransform: {fileID: 1088825295}
   objectTransform: {fileID: 1088825295}
+  positionPointer: {fileID: 0}
   dropHeight: 1
   sound: {fileID: 0}
   AM: {fileID: 0}
@@ -25270,6 +25397,7 @@ MonoBehaviour:
   radius: 2
   interactionTransform: {fileID: 1095586385}
   objectTransform: {fileID: 1095586385}
+  positionPointer: {fileID: 0}
   dropHeight: 2
   sound: {fileID: 0}
   AM: {fileID: 0}
@@ -26709,6 +26837,7 @@ MonoBehaviour:
   radius: 2
   interactionTransform: {fileID: 1188033718}
   objectTransform: {fileID: 1188033718}
+  positionPointer: {fileID: 0}
   dropHeight: 1
   sound: {fileID: 0}
   AM: {fileID: 0}
@@ -26811,6 +26940,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 995067795}
   subtask: {fileID: 495146369}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!23 &1190816214
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26998,6 +27128,7 @@ MonoBehaviour:
   radius: 2.5
   interactionTransform: {fileID: 1200740898}
   objectTransform: {fileID: 1200740898}
+  positionPointer: {fileID: 0}
   dropHeight: 1
   sound: {fileID: 0}
   AM: {fileID: 0}
@@ -27307,6 +27438,7 @@ MonoBehaviour:
   radius: 2
   interactionTransform: {fileID: 1216242271}
   objectTransform: {fileID: 1216242271}
+  positionPointer: {fileID: 1265493280}
   dropHeight: 1
   sound: {fileID: 0}
   AM: {fileID: 0}
@@ -28051,6 +28183,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 0}
   subtask: {fileID: 0}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!64 &1243611127
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -28390,6 +28523,77 @@ Transform:
   m_Father: {fileID: 1986131526}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1265493280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1265493281}
+  - component: {fileID: 1265493283}
+  - component: {fileID: 1265493282}
+  m_Layer: 0
+  m_Name: Chair1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1265493281
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1265493280}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.41, y: 6.792, z: 2.68}
+  m_LocalScale: {x: 0.23502, y: 0.23502, z: 0.23502}
+  m_Children: []
+  m_Father: {fileID: 871313508}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1265493282
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1265493280}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1265493283
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1265493280}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1268613909
 GameObject:
   m_ObjectHideFlags: 0
@@ -28957,6 +29161,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 1931167920}
   subtask: {fileID: 1691459100}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!114 &1309509180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28973,6 +29178,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 572853153}
   subtask: {fileID: 706321969}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!114 &1309509181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28989,6 +29195,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 1188033717}
   subtask: {fileID: 191045966}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!23 &1309509182
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29059,6 +29266,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 0}
   subtask: {fileID: 811835910}
   isOneShotInteraction: 0
+  totalTimeForInteraction: 100
 --- !u!1001 &1310391041
 Prefab:
   m_ObjectHideFlags: 0
@@ -29655,6 +29863,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 180419874}
   subtask: {fileID: 1656751314}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!65 &1335704237
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36704,6 +36913,7 @@ Transform:
   - {fileID: 146820285}
   - {fileID: 282404435}
   - {fileID: 24448583}
+  - {fileID: 871313508}
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -36837,6 +37047,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 1661625279}
   subtask: {fileID: 130265928}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!1 &1619854423 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 1bb3f2ef60d12e0448df9a7bea0cc7b9, type: 3}
@@ -40443,6 +40654,7 @@ MonoBehaviour:
   radius: 2.5
   interactionTransform: {fileID: 1630627239}
   objectTransform: {fileID: 1630627239}
+  positionPointer: {fileID: 0}
   dropHeight: 1
   sound: {fileID: 0}
   AM: {fileID: 0}
@@ -41021,6 +41233,7 @@ MonoBehaviour:
   radius: 2
   interactionTransform: {fileID: 1661625278}
   objectTransform: {fileID: 1661625278}
+  positionPointer: {fileID: 2136861429}
   dropHeight: 1
   sound: {fileID: 0}
   AM: {fileID: 0}
@@ -42313,6 +42526,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 995067795}
   subtask: {fileID: 527842536}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!4 &1730696334 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400010, guid: 1bb3f2ef60d12e0448df9a7bea0cc7b9, type: 3}
@@ -42981,6 +43195,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 1088825294}
   subtask: {fileID: 1656751314}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!65 &1769469140
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44500,6 +44715,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 995067795}
   subtask: {fileID: 527842536}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!23 &1842300212
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -45433,6 +45649,77 @@ Transform:
   m_Father: {fileID: 232219729}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1923257799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1923257800}
+  - component: {fileID: 1923257802}
+  - component: {fileID: 1923257801}
+  m_Layer: 0
+  m_Name: Chair4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1923257800
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1923257799}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.08, y: 6.792, z: 4.14}
+  m_LocalScale: {x: 0.23502, y: 0.23502, z: 0.23502}
+  m_Children: []
+  m_Father: {fileID: 871313508}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1923257801
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1923257799}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1923257802
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1923257799}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1923498041
 GameObject:
   m_ObjectHideFlags: 0
@@ -45628,6 +45915,7 @@ MonoBehaviour:
   radius: 2
   interactionTransform: {fileID: 1931167921}
   objectTransform: {fileID: 1931167921}
+  positionPointer: {fileID: 0}
   dropHeight: 1
   sound: {fileID: 0}
   AM: {fileID: 0}
@@ -46409,6 +46697,7 @@ MonoBehaviour:
   radius: 2.52
   interactionTransform: {fileID: 1960490040}
   objectTransform: {fileID: 1960490040}
+  positionPointer: {fileID: 0}
   dropHeight: 1
   sound: {fileID: 0}
   AM: {fileID: 0}
@@ -47078,6 +47367,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 571914162}
   subtask: {fileID: 130265928}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!4 &2002535478 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: f9fc1dbce7ceb1244995ec59c7d6b1ee, type: 3}
@@ -47172,6 +47462,7 @@ MonoBehaviour:
   radius: 2.04
   interactionTransform: {fileID: 618369103}
   objectTransform: {fileID: 2007973690}
+  positionPointer: {fileID: 0}
   dropHeight: 1
   sound: {fileID: 0}
   AM: {fileID: 0}
@@ -47994,6 +48285,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 1252277923}
   subtask: {fileID: 120476995}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!1 &2083283196
 GameObject:
   m_ObjectHideFlags: 0
@@ -48159,7 +48451,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2098081270}
-  m_LocalRotation: {x: 0.5326752, y: 0.070340455, z: 0.83613276, w: -0.110415146}
+  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
   m_LocalPosition: {x: 0.000022271464, y: -0.00006150465, z: 0.026027026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -48269,6 +48561,7 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 1960490036}
   subtask: {fileID: 2084842553}
   isOneShotInteraction: 1
+  totalTimeForInteraction: 100
 --- !u!1 &2104145238
 GameObject:
   m_ObjectHideFlags: 0
@@ -48698,6 +48991,77 @@ Transform:
   m_Father: {fileID: 158491259}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2136861429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2136861430}
+  - component: {fileID: 2136861432}
+  - component: {fileID: 2136861431}
+  m_Layer: 0
+  m_Name: Chair2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2136861430
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2136861429}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.408, y: 6.792, z: 4.1}
+  m_LocalScale: {x: 0.23502, y: 0.23502, z: 0.23502}
+  m_Children: []
+  m_Father: {fileID: 871313508}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &2136861431
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2136861429}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &2136861432
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2136861429}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2137845537
 GameObject:
   m_ObjectHideFlags: 0

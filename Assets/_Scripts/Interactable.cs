@@ -17,7 +17,7 @@ public class Interactable : MonoBehaviour
 	private float startTimeOfInteraction;
 	private bool playerHasStartedInteraction = false;
 	private float currentTimeOfGame;
-	private float totalTimeForInteraction = 10;
+	public float totalTimeForInteraction = 100;
 	private float diffInCurrentTimeAndStartTime;
 	private float completionPercentage;
 	private GameObject[] players;

@@ -8,7 +8,8 @@ public class Pickupable : MonoBehaviour
     public Transform objectTransform;
     private GameObject[] players;
     private GameObject holder;
-	bool objectIsPickedUp = false;
+    public GameObject positionPointer;
+    bool objectIsPickedUp = false;
 	public float dropHeight = 1;
 	public	GameObject sound;
 	public	AudioManager AM;
@@ -19,6 +20,10 @@ public class Pickupable : MonoBehaviour
         if (holder)
         {
             holder.GetComponent<Player>().holding = "";
+            if (positionPointer)
+            {
+                positionPointer.GetComponent<MeshRenderer>().enabled = false;
+            }
         }
     }
 
@@ -46,7 +51,13 @@ public class Pickupable : MonoBehaviour
 					player.GetComponent<Player>().holding = name;
                     //Debug.Log (player.GetComponent<Player> ().holding);
                     holder = player;                                                                         //Set holder to player.  Holder will tell which player is holding the object.
-					if(this.tag=="chair")
+                    if (positionPointer)
+                    {
+                        MeshRenderer mr = positionPointer.GetComponent<MeshRenderer>();
+                        mr.enabled = true;
+                        mr.material.color = player.GetComponent<Player>().colour;
+                    }
+                    if (this.tag=="chair")
 						AM.Play("chairPickUp");
 					else if(this.tag=="couch")
 						AM.Play("couchPickUp");
@@ -67,6 +78,13 @@ public class Pickupable : MonoBehaviour
             this.EnableMeshColliders(true);
             holder.GetComponent<Player>().holding = "";
             objectIsPickedUp = false;
+
+            if (positionPointer)
+            {
+                MeshRenderer mr = positionPointer.GetComponent<MeshRenderer>();
+                mr.enabled = false;
+            }
+
             if (this.tag=="chair")
 				AM.Play("chairDrop");
 			else if(this.tag=="couch")

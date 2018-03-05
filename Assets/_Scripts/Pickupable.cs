@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Pickupable : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Pickupable : MonoBehaviour
     private GameObject[] players;
     private GameObject holder;
     public GameObject positionPointer;
+    public Image positionPointerImage;
     bool objectIsPickedUp = false;
 	public float dropHeight = 1;
 	public	GameObject sound;
@@ -23,6 +25,7 @@ public class Pickupable : MonoBehaviour
             if (positionPointer)
             {
                 positionPointer.GetComponent<MeshRenderer>().enabled = false;
+                positionPointerImage.enabled = false;
             }
         }
     }
@@ -55,6 +58,7 @@ public class Pickupable : MonoBehaviour
                     {
                         MeshRenderer mr = positionPointer.GetComponent<MeshRenderer>();
                         mr.enabled = true;
+                        positionPointerImage.enabled = true;
                         mr.material.color = player.GetComponent<Player>().colour;
                     }
                     if (this.tag=="chair")
@@ -83,6 +87,7 @@ public class Pickupable : MonoBehaviour
             {
                 MeshRenderer mr = positionPointer.GetComponent<MeshRenderer>();
                 mr.enabled = false;
+                positionPointerImage.enabled = false;
             }
 
             if (this.tag=="chair")

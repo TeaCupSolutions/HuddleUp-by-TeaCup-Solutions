@@ -108,7 +108,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                     // read inputs
                     float h = Input.GetAxis("P" + this.player + "_Horizontal");
                     float v = Input.GetAxis("P" + this.player + "_Vertical");
-                    m_Crouch = Input.GetButtonDown("P" + this.player + "_Crouch");
                     m_PickupAction = Input.GetButtonDown("P" + this.player + "_Pickup");
                     m_InteractAction = Input.GetButtonDown("P" + this.player + "_Interact");
                 // calculate move direction to pass to character
@@ -124,20 +123,35 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                         m_Move = v * Vector3.forward + h * Vector3.right;
                     }
 
-                    if (!m_Jump)
-                    {
-                        m_Jump = Input.GetButtonDown("P" + this.player + "_Jump");
-                    }
-
-                    m_sw.WriteLine(this.player + "|" + m_Move.x + "|" + m_Move.y + "|" + m_Move.z + "|" + m_Crouch + "|" + m_Jump + "|" + m_PickupAction + "|" + m_InteractAction);
+                if (!m_Jump)
+                {
+                    m_Jump = Input.GetButtonDown("P" + this.player + "_Jump");
                 }
-            m_Character.Move(m_Move, m_Crouch, m_Jump);
+
+                if (!m_Crouch)
+                {
+                    m_Crouch = Input.GetButtonDown("P" + this.player + "_Crouch");
+                }
+
+                m_sw.WriteLine(this.player + "|" + m_Move.x + "|" + m_Move.y + "|" + m_Move.z + "|" + m_Crouch + "|" + m_Jump + "|" + m_PickupAction + "|" + m_InteractAction);
+                }
+            //m_Character.Move(m_Move, m_Crouch, m_Jump);
         }
 
 
         // Fixed update is called in sync with physics
         private void FixedUpdate()
         {
+            m_Character.Move(m_Move, m_Crouch, m_Jump);
+            if (m_Jump)
+            {
+                m_Jump = false;
+            }
+
+            if (m_Crouch)
+            {
+                m_Crouch = false;
+            }
         }
 
         void OnDestroy()

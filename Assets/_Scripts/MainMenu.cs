@@ -15,6 +15,7 @@ public class MainMenu : MonoBehaviour {
 	}
     public void PlayGame() {
 		AM.Play("click");
+        Time.timeScale = 1;
         StaticValues.IsReplay = false;
         DateTime dt = System.DateTime.Now;
         StaticValues.ReplayName = dt.Year + "" + dt.Month + "" + dt.Hour + "" + dt.Hour + "" + dt.Minute + "" + dt.Second;

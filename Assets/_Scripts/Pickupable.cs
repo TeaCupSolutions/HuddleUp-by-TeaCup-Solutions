@@ -16,6 +16,7 @@ public class Pickupable : MonoBehaviour
 	public	GameObject sound;
 	public	AudioManager AM;
 	public string name;
+    private float initY;
 
     void OnDestroy()
     {
@@ -35,7 +36,9 @@ public class Pickupable : MonoBehaviour
         players = GameObject.FindGameObjectsWithTag("Player");                                               //Get all of the objects in the game with the tag "player" and put them into the array of game objects
 		sound=GameObject.FindGameObjectWithTag("AudioManager");
 		AM=sound.GetComponent<AudioManager>();
-	}
+        initY = this.transform.position.y;
+
+    }
 
     void Update()                                                                                            //This will run repeatedly until the game ends
     {
@@ -79,6 +82,7 @@ public class Pickupable : MonoBehaviour
         {
             //Apply gravity to the object
             //objectTransform.position = holder.transform.position + new Vector3(1f, dropHeight, 0.2f);
+            this.transform.position = new Vector3(this.transform.position.x,initY, this.transform.position.z);
             this.EnableMeshColliders(true);
             holder.GetComponent<Player>().holding = "";
             objectIsPickedUp = false;

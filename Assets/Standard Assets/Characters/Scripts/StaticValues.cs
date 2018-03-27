@@ -2,7 +2,7 @@
 {
     public static class StaticValues
 {
-    private static bool isReplay, isAtStartup;
+    private static bool isReplay, isAtStartup = true;
     private static string replayName;
     private static string replayBaseDir;
 

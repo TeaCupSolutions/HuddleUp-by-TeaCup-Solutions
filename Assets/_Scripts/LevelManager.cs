@@ -35,6 +35,7 @@ public class StateMessage : MessageBase
 public class LevelManager : MonoBehaviour {
     public ScoreController scoreController;
     public ReplayIngameMenu replayController;
+    private int connections;
 
     // Use this for initialization
     void Start () {
@@ -50,6 +51,7 @@ public class LevelManager : MonoBehaviour {
             NetworkServer.SendToAll((short)OutgoingRequests.IsGameState, state);
             NetworkServer.RegisterHandler((short)IngoingRequests.IncreaseScore, OnIncreaseScore);
         }
+        connections = 0;
     }
 
     public void OnIncreaseScore(NetworkMessage netMsg)
@@ -64,16 +66,20 @@ public class LevelManager : MonoBehaviour {
         replayController.replayAction(message.action);
     }
 
-    void OnPlayerConnected(NetworkPlayer player)
+    private void Update()
     {
-        StateMessage state = new StateMessage();
-        if (StaticValuesNamespace.StaticValues.IsReplay)
+        if(NetworkServer.connections.Count != connections)
         {
-            NetworkServer.SendToAll((short)OutgoingRequests.IsReplayState, state);
-        }
-        else
-        {
-            NetworkServer.SendToAll((short)OutgoingRequests.IsGameState, state);
+            connections = NetworkServer.connections.Count;
+            StateMessage state = new StateMessage();
+            if (StaticValuesNamespace.StaticValues.IsReplay)
+            {
+                NetworkServer.SendToAll((short)OutgoingRequests.IsReplayState, state);
+            }
+            else
+            {
+                NetworkServer.SendToAll((short)OutgoingRequests.IsGameState, state);
+            }
         }
     }
 }

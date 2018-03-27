@@ -16,9 +16,13 @@ public class InfoController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Camera cam = Camera.main;
+        Camera cam = Camera.current;
 
-        transform.LookAt(transform.position + cam.transform.rotation * Vector3.forward,
+        if(cam)
+        {
+            transform.LookAt(transform.position + cam.transform.rotation * Vector3.forward,
             cam.transform.rotation * Vector3.up);
+        }
+        
     }
 }

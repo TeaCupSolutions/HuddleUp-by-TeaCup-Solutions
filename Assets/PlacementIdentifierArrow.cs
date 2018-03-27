@@ -17,10 +17,13 @@ public class PlacementIdentifierArrow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Camera cam = Camera.main;
+        Camera cam = Camera.current;
 
-        holderCanvas.transform.LookAt(transform.position + cam.transform.rotation * Vector3.forward,
+        if (cam)
+        {
+            holderCanvas.transform.LookAt(transform.position + cam.transform.rotation * Vector3.forward,
             cam.transform.rotation * Vector3.up);
+        }
 
         MeshRenderer mr;
         if (mr = holder.GetComponent<MeshRenderer>()) {

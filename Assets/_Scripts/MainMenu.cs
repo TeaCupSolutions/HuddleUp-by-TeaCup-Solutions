@@ -28,6 +28,7 @@ public class MainMenu : MonoBehaviour {
 
     public void ShowReplay()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }

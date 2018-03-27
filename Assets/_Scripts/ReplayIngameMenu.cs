@@ -77,6 +77,13 @@ public class ReplayIngameMenu : MonoBehaviour {
             cameras[currentCam].enabled = true;
         }
     }
+    void Start()
+    {
+        currentCam = 0;
+        isPlaying = true;
+        timeScaleModifier = 1;
+        Time.timeScale = 1;
+    }
 
     public enum ReplayAction
     {

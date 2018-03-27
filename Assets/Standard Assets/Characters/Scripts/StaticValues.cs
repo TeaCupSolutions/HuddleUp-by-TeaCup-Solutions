@@ -2,7 +2,7 @@
 {
     public static class StaticValues
 {
-    private static bool isReplay;
+    private static bool isReplay, isAtStartup;
     private static string replayName;
     private static string replayBaseDir;
 
@@ -48,5 +48,17 @@
             replayBaseDir = value;
         }
     }
-}
+
+    public static bool IsAtStartup
+    {
+            get
+            {
+                return isAtStartup;
+            }
+            set
+            {
+                isAtStartup = value;
+            }
+    }
+    }
 }

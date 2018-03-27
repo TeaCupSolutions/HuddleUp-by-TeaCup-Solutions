@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -74,6 +75,45 @@ public class ReplayIngameMenu : MonoBehaviour {
                 currentCam = 0;
             }
             cameras[currentCam].enabled = true;
+        }
+    }
+
+    public enum ReplayAction
+    {
+        Play = 0,
+        SpeedUp = 1,
+        SlowDown = 2,
+        CameraPrev = 3,
+        CameraNext = 4,
+        Reset = 5,
+        Quit = 6
+    }
+
+    internal void replayAction(int action)
+    {
+        switch (action)
+        {
+            case (int)ReplayAction.Play:
+                Pause();
+                break;
+            case (int)ReplayAction.SlowDown:
+                SlowDown();
+                break;
+            case (int)ReplayAction.SpeedUp:
+                SpeedUp();
+                break;
+            case (int)ReplayAction.CameraNext:
+                NextCamera();
+                break;
+            case (int)ReplayAction.CameraPrev:
+                PrviousCamera();
+                break;
+            case (int)ReplayAction.Reset:
+                ReloadReplay();
+                break;
+            case (int)ReplayAction.Quit:
+                ExitReplay();
+                break;
         }
     }
 

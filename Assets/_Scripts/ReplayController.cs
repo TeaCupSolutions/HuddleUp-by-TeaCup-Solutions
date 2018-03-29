@@ -5,13 +5,16 @@ using UnityEngine;
 using System.IO;
 using StaticValuesNamespace;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 public class ReplayController : MonoBehaviour
 {
     StreamWriter m_sw;
     StreamReader m_sr;
     GameObject[] players;
+    public ScoreController scoreController;
     int offset = 0;
+    Queue<KeyValuePair<int, int>> scores = new Queue<KeyValuePair<int, int>>();
 
     // Use this for initialization
     void Start()
@@ -58,18 +61,6 @@ public class ReplayController : MonoBehaviour
             var line = m_sr.ReadLine();
             if (line != null)
             {
-                /*
-                //load all state
-                String[] inputs = line.Split('|');
-                m_Move.x = float.Parse(inputs[1]);
-                m_Move.y = float.Parse(inputs[2]);
-                m_Move.z = float.Parse(inputs[3]);
-                m_Crouch = (inputs[4] == "True");
-                m_Jump = (inputs[5] == "True");
-                m_PickupAction = (inputs[6] == "True");
-                m_InteractAction = (inputs[7] == "True");
-                */
-
                 String[] inputs = line.Split('|');
                 offset = 0;
                 foreach (GameObject player in players)
@@ -80,6 +71,18 @@ public class ReplayController : MonoBehaviour
                     Quaternion q = new Quaternion((float)double.Parse(inputs[offset]), (float)double.Parse(inputs[offset + 1]), (float)double.Parse(inputs[offset + 2]), (float)double.Parse(inputs[offset + 3]));
                     player.transform.rotation = q;
                     offset += 4;
+                    player.GetComponent<ThirdPersonUserControl>().SetPickupActionState(bool.Parse(inputs[offset]));
+                    offset++;
+                    player.GetComponent<ThirdPersonUserControl>().SetInteractionActionState(bool.Parse(inputs[offset]));
+                    offset++;
+                }
+
+                int counter = int.Parse(inputs[offset]);
+                offset += 1;
+                for (int i =0; i > counter; i++)
+                {
+                    scoreController.IncrementScore(int.Parse(inputs[offset]), int.Parse(inputs[offset+1]));
+                    offset += 2;
                 }
             }
             else
@@ -93,10 +96,25 @@ public class ReplayController : MonoBehaviour
             foreach (GameObject player in players)
             {
                 m_sw.Write(player.transform.position.x + "|" + player.transform.position.y + "|" + player.transform.position.z + "|"
-                            + player.transform.rotation.x + "|" + player.transform.rotation.y + "|" + player.transform.rotation.z + "|" + player.transform.rotation.w + "|");
+                            + player.transform.rotation.x + "|" + player.transform.rotation.y + "|" + player.transform.rotation.z + "|" + player.transform.rotation.w + "|" + player.GetComponent<ThirdPersonUserControl>().getInteractionActionState() + "|" + player.GetComponent<ThirdPersonUserControl>().getInteractionActionState() + "|");
+            }
+
+            m_sw.Write(scores.Count + "|");
+            if (scores.Count > 0)
+            {
+                foreach (KeyValuePair<int, int> score in scores)
+                {
+                    m_sw.Write(score.Key + "|" + score.Value + "|");
+                }
             }
             m_sw.WriteLine();
+            scores.Clear();
         }
+    }
+
+    public void AddScoreToReplay(int player, int stat)
+    {
+        scores.Enqueue(new KeyValuePair<int, int>(player, stat));
     }
 
     void OnDestroy()

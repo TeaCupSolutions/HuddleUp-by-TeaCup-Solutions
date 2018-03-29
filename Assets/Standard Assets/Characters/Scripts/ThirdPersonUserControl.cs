@@ -86,5 +86,15 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         {
             return m_InteractAction;
         }
+
+        public void SetPickupActionState(bool set)
+        {
+            m_PickupAction = set;
+        }
+
+        public void SetInteractionActionState(bool set)
+        {
+            m_InteractAction = set;
+        }
     }
 }

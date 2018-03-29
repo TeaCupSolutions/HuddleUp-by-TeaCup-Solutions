@@ -1941,6 +1941,7 @@ GameObject:
   m_Component:
   - component: {fileID: 120459952}
   - component: {fileID: 120459951}
+  - component: {fileID: 120459953}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -1974,6 +1975,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &120459953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 120459950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 369eda37c6b5ad5449c4f8cd8a3e1ffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &120476993
 GameObject:
   m_ObjectHideFlags: 0

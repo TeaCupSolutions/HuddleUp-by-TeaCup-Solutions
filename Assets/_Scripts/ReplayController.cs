@@ -14,7 +14,7 @@ public class ReplayController : MonoBehaviour
     GameObject[] players;
     public ScoreController scoreController;
     int offset = 0;
-    Queue<KeyValuePair<int, int>> scores = new Queue<KeyValuePair<int, int>>();
+    List<KeyValuePair<int, int>> scores = new List<KeyValuePair<int, int>>();
 
     // Use this for initialization
     void Start()
@@ -75,11 +75,24 @@ public class ReplayController : MonoBehaviour
                     offset++;
                     player.GetComponent<ThirdPersonUserControl>().SetInteractionActionState(bool.Parse(inputs[offset]));
                     offset++;
+                    Animator anim = player.GetComponent<Animator>();
+                    anim.SetFloat("Forward", (float)double.Parse(inputs[offset]), 0.1f, Time.deltaTime);
+                    offset++;
+                    anim.SetFloat("Turn", (float)double.Parse(inputs[offset]), 0.1f, Time.deltaTime);
+                    offset++;
+                    anim.SetBool("Crouch", bool.Parse(inputs[offset]));
+                    offset++;
+                    anim.SetBool("OnGround", bool.Parse(inputs[offset]));
+                    offset++;
+                    anim.SetFloat("Jump", (float)double.Parse(inputs[offset]));
+                    offset++;
+                    anim.SetFloat("JumpLeg", (float)double.Parse(inputs[offset]));
+                    offset++;
                 }
 
                 int counter = int.Parse(inputs[offset]);
                 offset += 1;
-                for (int i =0; i > counter; i++)
+                for (int i = 0; i < counter; i++)
                 {
                     scoreController.IncrementScore(int.Parse(inputs[offset]), int.Parse(inputs[offset+1]));
                     offset += 2;
@@ -95,8 +108,12 @@ public class ReplayController : MonoBehaviour
             //save all state
             foreach (GameObject player in players)
             {
+                Animator anim = player.GetComponent<Animator>();
                 m_sw.Write(player.transform.position.x + "|" + player.transform.position.y + "|" + player.transform.position.z + "|"
-                            + player.transform.rotation.x + "|" + player.transform.rotation.y + "|" + player.transform.rotation.z + "|" + player.transform.rotation.w + "|" + player.GetComponent<ThirdPersonUserControl>().getInteractionActionState() + "|" + player.GetComponent<ThirdPersonUserControl>().getInteractionActionState() + "|");
+                            + player.transform.rotation.x + "|" + player.transform.rotation.y + "|" + player.transform.rotation.z + "|" 
+                            + player.transform.rotation.w + "|" + player.GetComponent<ThirdPersonUserControl>().getPickupActionState() + "|" 
+                            + player.GetComponent<ThirdPersonUserControl>().getInteractionActionState() + "|"
+                            + anim.GetFloat("Forward") + "|" + anim.GetFloat("Turn") + "|" + anim.GetBool("Crouch") + "|" + anim.GetBool("OnGround") + "|" + anim.GetFloat("Jump") + "|" + anim.GetFloat("JumpLeg") + "|");
             }
 
             m_sw.Write(scores.Count + "|");
@@ -114,7 +131,7 @@ public class ReplayController : MonoBehaviour
 
     public void AddScoreToReplay(int player, int stat)
     {
-        scores.Enqueue(new KeyValuePair<int, int>(player, stat));
+        scores.Add(new KeyValuePair<int, int>(player, stat));
     }
 
     void OnDestroy()

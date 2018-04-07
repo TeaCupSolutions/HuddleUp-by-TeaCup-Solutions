@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 
 
+
 public class TaskManager : MonoBehaviour
 {
 
@@ -15,18 +16,24 @@ public class TaskManager : MonoBehaviour
     public List<TMP_Text> taskDescriptions = new List<TMP_Text>();
     public List<Image> StickySprites = new List<Image>();
 
+    public GameObject sound;
+    public AudioManager AM;
+
     private bool[] FadeMask_Sticky = { false, false };
+  
 
     // Use this for initialization
     void Start()
     {
-
+        //connecting to audiomnaer through tag
+        sound = GameObject.FindGameObjectWithTag("AudioManager");
+        AM = sound.GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+   
         int remove = -1;
 
         HandleTaskHUD();
@@ -41,10 +48,28 @@ public class TaskManager : MonoBehaviour
         //loop through each active task, stop if we hit completed task
         for (int i = 0; i < activeTasks.Capacity; i++)
         {
-
+           
             //if we find an active task that is complete
             if (activeTasks[i].IsCompleted)
             {
+                //random number between 1 and 4 (1 inclusive and 5 exclusive)
+                int randomNum = Random.Range(1, 5);
+                if(randomNum == 1)
+                {
+                    AM.Play("taskCompleteMessageOne");
+                }
+                if (randomNum == 2)
+                {
+                    AM.Play("taskCompleteMessageTwo");
+                }
+                if (randomNum == 3)
+                {
+                    AM.Play("taskCompleteMessageThree");
+                }
+                if (randomNum == 4)
+                {
+                    AM.Play("taskCompleteMessageFour");
+                }
 
                 //store the value that we are going to remove
                 remove = i;

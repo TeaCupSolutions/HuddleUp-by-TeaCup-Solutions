@@ -12,6 +12,10 @@ public class Interactable : MonoBehaviour
 	public GameObject condictionObjectObject;
     public SubTask subtask;
     public bool isOneShotInteraction = false;
+
+    public GameObject sound;
+    public AudioManager AM;
+
     private bool isFinished = false;
     private string condictionObject;
 	private float startTimeOfInteraction;
@@ -25,6 +29,10 @@ public class Interactable : MonoBehaviour
 	void Start()
 	{
 		players = GameObject.FindGameObjectsWithTag("Player");
+        
+        sound = GameObject.FindGameObjectWithTag("AudioManager");
+        AM = sound.GetComponent<AudioManager>();
+
         if (condictionObjectObject)
         {
             condictionObject = condictionObjectObject.GetComponent<Pickupable>().name;
@@ -67,12 +75,45 @@ public class Interactable : MonoBehaviour
                             if (objectBeingHeld == condictionObject)
                             {
                                 //Debug.Log ("Check1");
+                                if (this.tag == "chair")
+                                    AM.Play("chairDrop");
+                                else if (this.tag == "tDogFoodDropBowl")
+                                    AM.Play("eatFood");
+                                else if (this.tag == "cooking")
+                                    AM.Play("Cooking");
+                                else if (this.tag == "tPetDog")
+                                    AM.Play("DogPlay");
+                                else
+                                    AM.Play("drop");
+
+
+
                                 startTimeOfInteraction = Time.time * 1000;
                                 playerHasStartedInteraction = true;
+
+                                
                             }
+                          /*  if (this.tag == "tDogFoodDropBowl")
+                                AM.Play("eatFood");
+                            else if (this.tag == "tPetDog")
+                                AM.Play("DogPlay");
+                            else if (this.tag == "chair")
+                                AM.Play("chairDrop");
+                            else
+                                AM.Play("drop");*/
                         }
                         else
                         {
+                            if (this.tag == "chair")
+                                AM.Play("chairDrop");
+                            else if (this.tag == "tDogFoodDropBowl")
+                                AM.Play("eatFood");
+                            else if (this.tag == "cooking")
+                                AM.Play("Cooking");
+                            else if (this.tag == "tPetDog")
+                                AM.Play("DogPlay");
+                            else
+                                AM.Play("drop");
                             startTimeOfInteraction = Time.time * 1000;
                             playerHasStartedInteraction = true;
                         }

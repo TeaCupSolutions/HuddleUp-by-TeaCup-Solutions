@@ -70,7 +70,7 @@ public class Pickupable : MonoBehaviour
 						AM.Play("couchPickUp");
 					else if(this.tag=="bin")
 						AM.Play("binPickUp");
-					else
+                    else
 						AM.Play("pickup");
 					break;
                 }
@@ -102,7 +102,9 @@ public class Pickupable : MonoBehaviour
 				AM.Play("binDrop");
 			else if(this.tag=="plate")
 				AM.Play("plateDrop");
-			else
+            else if (this.tag == "fridgeOpen")
+                AM.Play("fridgeOpen");
+            else
 				AM.Play("drop");
         }
         

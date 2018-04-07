@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using StaticValuesNamespace;
-using System;
+using System; 
 
 public class MainMenu : MonoBehaviour {
 	public	GameObject sound;

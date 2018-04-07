@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44962835, g: 0.49969935, b: 0.5756568, a: 1}
+  m_IndirectSpecularColor: {r: 0.449628, g: 0.49969918, b: 0.5756561, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -162,6 +162,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 0}
   subtask: {fileID: 902538980}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!23 &24448585
 MeshRenderer:
@@ -686,7 +688,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -1009,6 +1011,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 995067795}
   subtask: {fileID: 495146369}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!23 &96051854
 MeshRenderer:
@@ -2244,7 +2248,7 @@ GameObject:
   - component: {fileID: 146820286}
   m_Layer: 0
   m_Name: dogeBowl
-  m_TagString: Untagged
+  m_TagString: tDogFoodDropBowl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2278,6 +2282,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 682642899}
   subtask: {fileID: 816130985}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!23 &146820287
 MeshRenderer:
@@ -3131,8 +3137,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 191850095}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 960, y: 540, z: 0}
-  m_LocalScale: {x: 2.4, y: 2.4, z: 2.4}
+  m_LocalPosition: {x: 321.5, y: 159.5, z: 0}
+  m_LocalScale: {x: 0.80375, y: 0.80375, z: 0.80375}
   m_Children:
   - {fileID: 262514719}
   - {fileID: 1196082296}
@@ -3458,6 +3464,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 995067795}
   subtask: {fileID: 527842536}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!23 &194522066
 MeshRenderer:
@@ -3647,7 +3655,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 197742086}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.8, y: -28.999998, z: 0}
+  m_LocalPosition: {x: -16.8, y: -29, z: 0}
   m_LocalScale: {x: 1, y: 9.999637, z: 1}
   m_Children: []
   m_Father: {fileID: 498797341}
@@ -3882,7 +3890,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 223546999}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.3, y: -28.999998, z: 0}
+  m_LocalPosition: {x: -16.3, y: -29, z: 0}
   m_LocalScale: {x: 1, y: 9.999637, z: 1}
   m_Children: []
   m_Father: {fileID: 1100503023}
@@ -4082,7 +4090,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 246486757}
-  m_LocalRotation: {x: 0.5326752, y: 0.070340455, z: 0.83613276, w: -0.110415146}
+  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
   m_LocalPosition: {x: 0.000022271464, y: -0.00006150465, z: 0.026027026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4188,7 +4196,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 256565517}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.5, y: -30.000002, z: 0}
+  m_LocalPosition: {x: -25.499998, y: -30, z: 0}
   m_LocalScale: {x: 1, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 80825536}
@@ -4420,7 +4428,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 262514718}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -299.99997, y: 194.99998, z: 0}
+  m_LocalPosition: {x: -300, y: 168.4448, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 191850099}
@@ -5899,6 +5907,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 1200740897}
   subtask: {fileID: 1656751314}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!65 &412765906
 BoxCollider:
@@ -6507,6 +6517,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 995067795}
   subtask: {fileID: 527842536}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!23 &451197925
 MeshRenderer:
@@ -6588,7 +6600,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 451383420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.5, y: -30.000002, z: 0}
+  m_LocalPosition: {x: -25.499998, y: -30, z: 0}
   m_LocalScale: {x: 1, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 2054775279}
@@ -6941,6 +6953,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 195674169}
   subtask: {fileID: 1778751422}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!1 &470209399
 GameObject:
@@ -6968,7 +6982,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 470209399}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 269.99997, y: -104.999985, z: 0}
+  m_LocalPosition: {x: 270, y: -78.44479, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 191850099}
@@ -7315,6 +7329,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 1216242272}
   subtask: {fileID: 130265928}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!1 &482270175
 GameObject:
@@ -7364,6 +7380,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 995067795}
   subtask: {fileID: 495146369}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!23 &482270178
 MeshRenderer:
@@ -7697,7 +7715,7 @@ GameObject:
   - component: {fileID: 497053680}
   m_Layer: 0
   m_Name: dog
-  m_TagString: Untagged
+  m_TagString: tPetDog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7752,6 +7770,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 0}
   subtask: {fileID: 89973230}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!114 &497053680
 MonoBehaviour:
@@ -8028,7 +8048,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 511743478}
-  m_LocalRotation: {x: 0.5326752, y: 0.070340455, z: 0.83613276, w: -0.110415146}
+  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
   m_LocalPosition: {x: 0.000022271464, y: -0.00006150465, z: 0.026027026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -9885,6 +9905,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 652719920}
   subtask: {fileID: 130265928}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!1001 &604451003
 Prefab:
@@ -10172,7 +10194,7 @@ GameObject:
   - component: {fileID: 616416970}
   m_Layer: 0
   m_Name: Object002
-  m_TagString: Untagged
+  m_TagString: tPetDog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10626,6 +10648,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 1095586389}
   subtask: {fileID: 1050743053}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!4 &635660999 stripped
 Transform:
@@ -11836,7 +11860,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 722411825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 50, y: -259.81198, z: 0}
+  m_LocalPosition: {x: 50, y: -233.25679, z: 0}
   m_LocalScale: {x: 0.9317157, y: 0.9317161, z: 0.9317161}
   m_Children:
   - {fileID: 535107421}
@@ -12843,6 +12867,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 1630627238}
   subtask: {fileID: 1656751314}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!65 &806330997
 BoxCollider:
@@ -13993,7 +14019,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 928128419}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -343, y: -187.74998, z: 0}
+  m_LocalPosition: {x: -343, y: -161.1948, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1965914499}
@@ -14207,6 +14233,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 1960490036}
   subtask: {fileID: 1519405557}
   isOneShotInteraction: 0
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!64 &945989932
 MeshCollider:
@@ -14238,6 +14266,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 2007973685}
   subtask: {fileID: 1782633333}
   isOneShotInteraction: 0
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!1 &953334926
 GameObject:
@@ -14605,7 +14635,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 991849041}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -299.99997, y: -104.999985, z: 0}
+  m_LocalPosition: {x: -300, y: -78.44479, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 191850099}
@@ -20393,7 +20423,7 @@ AudioSource:
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
-  BypassEffects: 0
+  BypassEffects: 1
   BypassListenerEffects: 0
   BypassReverbZones: 0
   rolloffCustomCurve:
@@ -20486,8 +20516,12 @@ MonoBehaviour:
   - washDishes
   - waterDrop
   - dogfooddrop
-  - dogplay
+  - DogPlay
   - pooppickup
+  - taskCompleteMessageOne
+  - taskCompleteMessageTwo
+  - taskCompleteMessageThree
+  - taskCompleteMessageFour
   audioClip:
   - {fileID: 8300000, guid: ec41cfb0cef6d974b916cdf3a6e90488, type: 3}
   - {fileID: 8300000, guid: ba7f4a1497854ce4687a14e4cefc65fc, type: 3}
@@ -20500,7 +20534,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7b25ce1ae1bd2ef478011c3124e21a3b, type: 3}
   - {fileID: 8300000, guid: badbd6f3202994a4c8ce584d01719fdb, type: 3}
   - {fileID: 8300000, guid: 4d854b9f355ca054295fd9fc25d41351, type: 3}
-  - {fileID: 8300000, guid: 2131a0877db8dab42ab1394959e24f53, type: 3}
+  - {fileID: 8300000, guid: a3858b73eb5862d4d812ca45ce6aafa1, type: 3}
   - {fileID: 8300000, guid: add222ba4e8636447984ed894310f320, type: 3}
   - {fileID: 8300000, guid: a171422ba3d392442808cc87abcbb548, type: 3}
   - {fileID: 8300000, guid: dd563d0845cd8bb498163930d9c935fb, type: 3}
@@ -20514,6 +20548,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4df0d1a7f39a0bf44bc25a8cf559ab16, type: 3}
   - {fileID: 8300000, guid: 72c3febe24fc0b74d9037477f86f69db, type: 3}
   - {fileID: 8300000, guid: 634d005228f4fd64c8f26ed5666c0127, type: 3}
+  - {fileID: 8300000, guid: c725d58247e4210459e3d33b308f3eac, type: 3}
+  - {fileID: 8300000, guid: 1c8159abf21a33541a7665ad232c124c, type: 3}
+  - {fileID: 8300000, guid: 97823dd67be79a24f9f75076b90f0c6b, type: 3}
+  - {fileID: 8300000, guid: cc496a95e5e658c40b936a67bed11dd8, type: 3}
   clipFound: 0
 --- !u!4 &1154336739
 Transform:
@@ -20522,7 +20560,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1154336736}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.091309, y: 3.1074219, z: 0.7392578}
+  m_LocalPosition: {x: -8.091309, y: 3.1074219, z: -1.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -21054,6 +21092,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 995067795}
   subtask: {fileID: 495146369}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!23 &1190816214
 MeshRenderer:
@@ -21134,7 +21174,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1196082295}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 269.99997, y: 194.99998, z: 0}
+  m_LocalPosition: {x: 270, y: 168.4448, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 191850099}
@@ -22048,6 +22088,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 0}
   subtask: {fileID: 0}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!64 &1243611127
 MeshCollider:
@@ -22844,7 +22886,7 @@ GameObject:
   - component: {fileID: 1309509185}
   m_Layer: 0
   m_Name: pot
-  m_TagString: Untagged
+  m_TagString: cooking
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22878,6 +22920,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 1931167920}
   subtask: {fileID: 1691459100}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!114 &1309509180
 MonoBehaviour:
@@ -22895,6 +22939,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 572853153}
   subtask: {fileID: 706321969}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!114 &1309509181
 MonoBehaviour:
@@ -22912,6 +22958,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 1188033717}
   subtask: {fileID: 191045966}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!23 &1309509182
 MeshRenderer:
@@ -22983,6 +23031,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 0}
   subtask: {fileID: 811835910}
   isOneShotInteraction: 0
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!1001 &1310391041
 Prefab:
@@ -23550,6 +23600,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 180419874}
   subtask: {fileID: 1656751314}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!65 &1335704237
 BoxCollider:
@@ -24360,7 +24412,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1412290844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.5, y: -30.000002, z: 0}
+  m_LocalPosition: {x: -25.499998, y: -30, z: 0}
   m_LocalScale: {x: 1, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 1540544943}
@@ -24448,7 +24500,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1415254626}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -399.99997, y: 224.99998, z: 0}
+  m_LocalPosition: {x: -400, y: 198.4448, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1699399396}
@@ -24792,7 +24844,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1464617622}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.8, y: -28.999998, z: 0}
+  m_LocalPosition: {x: -16.8, y: -29, z: 0}
   m_LocalScale: {x: 1, y: 9.999637, z: 1}
   m_Children: []
   m_Father: {fileID: 979833902}
@@ -25028,7 +25080,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1478191209}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 249.99997, y: 224.99998, z: 0}
+  m_LocalPosition: {x: 250, y: 198.4448, z: 0}
   m_LocalScale: {x: 0.9999998, y: 0.9999998, z: 0.9999998}
   m_Children:
   - {fileID: 1178325351}
@@ -25876,7 +25928,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1547401901}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -233, y: -187.74998, z: 0}
+  m_LocalPosition: {x: -233, y: -161.1948, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2054775279}
@@ -25954,7 +26006,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1547947987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.5, y: -30.000002, z: 0}
+  m_LocalPosition: {x: -25.499998, y: -30, z: 0}
   m_LocalScale: {x: 1, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 1965914499}
@@ -26046,7 +26098,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1548453793}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 237, y: -187.74998, z: 0}
+  m_LocalPosition: {x: 237, y: -161.1948, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 80825536}
@@ -27122,6 +27174,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 1661625279}
   subtask: {fileID: 130265928}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!1 &1619854423 stripped
 GameObject:
@@ -30599,7 +30653,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1628245745}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 346.25418, y: -187.74998, z: 0}
+  m_LocalPosition: {x: 346.25418, y: -161.1948, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1540544943}
@@ -32124,6 +32178,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 112.93101
       objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 1bb3f2ef60d12e0448df9a7bea0cc7b9, type: 3}
+      propertyPath: m_TagString
+      value: fridgeOpen
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bb3f2ef60d12e0448df9a7bea0cc7b9, type: 3}
   m_IsPrefabParent: 0
@@ -32735,6 +32793,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 1088825294}
   subtask: {fileID: 1656751314}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!65 &1769469140
 BoxCollider:
@@ -33061,7 +33121,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1781545428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 148.99997, y: -191.99998, z: 0}
+  m_LocalPosition: {x: 149, y: -165.4448, z: 0}
   m_LocalScale: {x: 0.66278654, y: 0.6627865, z: 0.6627865}
   m_Children:
   - {fileID: 1954081072}
@@ -33668,7 +33728,7 @@ GameObject:
   - component: {fileID: 1819680236}
   m_Layer: 0
   m_Name: elf pet
-  m_TagString: Untagged
+  m_TagString: tPetDog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34040,6 +34100,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 995067795}
   subtask: {fileID: 527842536}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!23 &1842300212
 MeshRenderer:
@@ -34330,7 +34392,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1869111784}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.599998, y: -28.999998, z: 0}
+  m_LocalPosition: {x: -16.600002, y: -29, z: 0}
   m_LocalScale: {x: 1, y: 9.999637, z: 1}
   m_Children: []
   m_Father: {fileID: 908902513}
@@ -35068,6 +35130,8 @@ MonoBehaviour:
   StickySprites:
   - {fileID: 1699399397}
   - {fileID: 1178325352}
+  sound: {fileID: 0}
+  AM: {fileID: 0}
 --- !u!1 &1927514342
 GameObject:
   m_ObjectHideFlags: 0
@@ -36293,6 +36357,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 571914162}
   subtask: {fileID: 130265928}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!4 &2002535478 stripped
 Transform:
@@ -37220,6 +37286,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 1252277923}
   subtask: {fileID: 120476995}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!1 &2084842551
 GameObject:
@@ -37404,6 +37472,8 @@ MonoBehaviour:
   condictionObjectObject: {fileID: 1960490036}
   subtask: {fileID: 2084842553}
   isOneShotInteraction: 1
+  sound: {fileID: 0}
+  AM: {fileID: 0}
   totalTimeForInteraction: 100
 --- !u!1 &2104430432
 GameObject:

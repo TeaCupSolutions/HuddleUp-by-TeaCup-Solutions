@@ -20,6 +20,9 @@ TagManager:
   - tPetDog
   - tDogFoodDropBowl
   - tPoopPickUp
+  - fridgeOpen
+  - fridgeClose
+  - cooking
   layers:
   - Default
   - TransparentFX

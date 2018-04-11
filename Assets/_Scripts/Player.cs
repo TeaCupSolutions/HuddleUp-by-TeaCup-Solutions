@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+
     public Text UIText;
 	public RectTransform HUD_Leadership, HUD_Communication, HUD_Creativity, HUD_BTC;
     public Material playerMaterial;
@@ -36,7 +37,7 @@ public class Player : MonoBehaviour
 	public int playerNum;
 	public string holding = "";
     public Color colour = Color.cyan;
-
+    public AudioClip[] playerAudioClip;
 
     void Start()
     {
@@ -67,7 +68,8 @@ public class Player : MonoBehaviour
 		Creativity_Max = 15;
 		BTC_Max = 15;
 
-
+       
+       
         //set bar to min position
         //HUD_Leadership.position = new Vector3(HUD_Leadership_MIN_X, HUD_Leadership_Y);
         playerMaterial.color = colour;
@@ -81,29 +83,40 @@ public class Player : MonoBehaviour
 
     public void IncrementBasedOnID(int identifier)
     {
-        var main = notifier.main;
+         
+         var main = notifier.main;
+        AudioSource audio = GetComponent<AudioSource>();
         if (identifier == 1) {
 			this.Communication_Current += 1;
             main.startColor = new Color(180/255f, 209 / 255f, 58 / 255f);
             notifier.Play();
+            //    audio.Play();
+            audio.clip = playerAudioClip[0];
+            audio.Play();
         }
         else if (identifier == 2)
         {
 			this.Leadership_Current++;
             main.startColor = new Color(23 / 255f, 169 / 255f, 187 / 255f);
             notifier.Play();
+            audio.clip = playerAudioClip[1];
+            audio.Play();
         }
         else if (identifier == 3)
         {
 			this.Creativity_Current += 1;
             main.startColor = new Color(139 / 255f, 87 / 255f, 126 / 255f);
             notifier.Play();
+            audio.clip = playerAudioClip[2];
+            audio.Play();
         }
         else if (identifier == 4)
         {
 			this.BTC_Current += 1;
             main.startColor = new Color(232 / 255f, 114 / 255f, 49 / 255f);
             notifier.Play();
+            audio.clip = playerAudioClip[3];
+            audio.Play();
         }
     }
 

@@ -41,10 +41,10 @@ public class LevelManager : MonoBehaviour {
     void Start () {
         StateMessage state = new StateMessage();
         state.state = true;
+        NetworkServer.RegisterHandler((short)IngoingRequests.ReplayAction, OnReplayAction);
         if (StaticValuesNamespace.StaticValues.IsReplay)
         {
             NetworkServer.SendToAll((short)OutgoingRequests.IsReplayState, state);
-            NetworkServer.RegisterHandler((short)IngoingRequests.ReplayAction, OnReplayAction);
         }
         else
         {

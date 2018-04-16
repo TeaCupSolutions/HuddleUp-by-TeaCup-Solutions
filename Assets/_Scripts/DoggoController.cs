@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DoggoController : MonoBehaviour {
     float timeCounter = 0;
-    Vector3 prevPos;
     Vector3 originalPos;
     // Use this for initialization
     void Start () {
@@ -15,6 +14,5 @@ public class DoggoController : MonoBehaviour {
 	void Update () {
         timeCounter += Time.deltaTime * 100;
         transform.position = Quaternion.AngleAxis(timeCounter, Vector3.up) * new Vector3(1.2f, 0f) + originalPos;
-        prevPos = transform.position;
     }
 }

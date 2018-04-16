@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-
-
+using UnityEngine.SceneManagement;
 
 public class TaskManager : MonoBehaviour
 {
@@ -18,7 +17,9 @@ public class TaskManager : MonoBehaviour
 
     public GameObject sound;
     public AudioManager AM;
+    public GameObject EndScreen;
 
+    private bool triggerEnd = false;
     private bool[] FadeMask_Sticky = { false, false };
   
 
@@ -40,9 +41,10 @@ public class TaskManager : MonoBehaviour
 
         checkWin(); // returns -1 if gameOver
 
-        if (checkWin() == -1)
+        if (checkWin() == -1 && !triggerEnd)
         {
-            Debug.Log("All tasks complete");
+            triggerEnd = true;
+            StartCoroutine(EndGame(3));
         }
 
         //loop through each active task, stop if we hit completed task
@@ -193,7 +195,12 @@ public class TaskManager : MonoBehaviour
         return false;
     }
 
-
+    IEnumerator EndGame(int seconds)
+    {
+        EndScreen.SetActive(true);
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene(0);
+    }
 
 
 

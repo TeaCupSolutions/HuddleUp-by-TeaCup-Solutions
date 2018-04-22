@@ -58,6 +58,10 @@ public class ReplayController : MonoBehaviour
     {
         if (StaticValues.IsReplay)
         {
+			if (Time.timeScale == 0) {
+				return;
+			}
+
             var line = m_sr.ReadLine();
             if (line != null)
             {

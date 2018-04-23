@@ -30,6 +30,8 @@ public class ReplayMenu : MonoBehaviour {
 
             //set name
             TextMeshProUGUI txt = instance.GetComponentInChildren<TextMeshProUGUI>();
+			txt.fontStyle = FontStyles.Bold;
+
             txt.text = dir.Name;
 
             //attach click event

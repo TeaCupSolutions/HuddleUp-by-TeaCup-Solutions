@@ -38,6 +38,8 @@ public class Player : MonoBehaviour
 	public string holding = "";
     public Color colour = Color.cyan;
     public AudioClip[] playerAudioClip;
+    public GameObject InteractionButton;
+    public GameObject PickupButton;
 
     void Start()
     {

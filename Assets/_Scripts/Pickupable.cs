@@ -17,6 +17,7 @@ public class Pickupable : MonoBehaviour
 	public	AudioManager AM;
 	public string name;
     private float initY;
+    private bool[] IsShowingButton = new bool[] { false, false, false, false };
 
     void OnDestroy()
     {
@@ -27,6 +28,12 @@ public class Pickupable : MonoBehaviour
             {
                 positionPointer.GetComponent<MeshRenderer>().enabled = false;
                 positionPointerImage.enabled = false;
+            }
+
+            if (IsShowingButton[holder.GetComponent<Player>().playerNum - 1])
+            {
+                holder.GetComponent<Player>().PickupButton.SetActive(false);
+                IsShowingButton[holder.GetComponent<Player>().playerNum - 1] = false;
             }
         }
     }
@@ -73,6 +80,12 @@ public class Pickupable : MonoBehaviour
                     else
 						AM.Play("pickup");
 					break;
+
+                }
+                if (distance <= radius)
+                {
+                    player.GetComponent<Player>().PickupButton.SetActive(true);
+                    IsShowingButton[player.GetComponent<Player>().playerNum - 1] = true;
                 }
             }
         }
@@ -106,6 +119,12 @@ public class Pickupable : MonoBehaviour
                 AM.Play("fridgeOpen");
             else
 				AM.Play("drop");
+
+            if (IsShowingButton[holder.GetComponent<Player>().playerNum - 1])
+            {
+                holder.GetComponent<Player>().PickupButton.SetActive(false);
+                IsShowingButton[holder.GetComponent<Player>().playerNum - 1] = false;
+            }
         }
         
         else if (objectIsPickedUp)                                                                           //If the player hasn't given any more commands...

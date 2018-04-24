@@ -25,6 +25,8 @@ public class Interactable : MonoBehaviour
 	private float diffInCurrentTimeAndStartTime;
 	private float completionPercentage;
 	private GameObject[] players;
+    private bool[] IsShowingButton = new bool[] { false, false, false, false };
+    private GameObject interactingPlayer;
 
 	void Start()
 	{
@@ -69,6 +71,7 @@ public class Interactable : MonoBehaviour
                         //Debug.Log ("Hello");
                         //Get the object the player is holding
                         string objectBeingHeld = player.GetComponent<Player>().holding;
+                        interactingPlayer = player;
 
                         if (condictionObject != null)
                         {
@@ -118,6 +121,19 @@ public class Interactable : MonoBehaviour
                             playerHasStartedInteraction = true;
                         }
                     }
+                    if (distance <= radius && player.GetComponent<Player>().holding == condictionObject)
+                    {
+                        player.GetComponent<Player>().InteractionButton.SetActive(true);
+                        IsShowingButton[player.GetComponent<Player>().playerNum-1] = true;
+                    }
+                    else
+                    {
+                        if (IsShowingButton[player.GetComponent<Player>().playerNum-1])
+                        {
+                            player.GetComponent<Player>().InteractionButton.SetActive(false);
+                            IsShowingButton[player.GetComponent<Player>().playerNum-1] = false;
+                        }
+                    }
                 }
             }
         }
@@ -130,6 +146,12 @@ public class Interactable : MonoBehaviour
 
 		if (percentage >= 100)
 		{
+            if (IsShowingButton[interactingPlayer.GetComponent<Player>().playerNum-1])
+            {
+                interactingPlayer.GetComponent<Player>().InteractionButton.SetActive(false);
+                IsShowingButton[interactingPlayer.GetComponent<Player>().playerNum-1] = false;
+            }
+
             Debug.Log(name + "Check1");
             playerHasStartedInteraction = false;
             
@@ -139,6 +161,7 @@ public class Interactable : MonoBehaviour
             if (isOneShotInteraction)
             {
                 isFinished = true;
+                
             }
 		}
 	}

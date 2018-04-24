@@ -18,7 +18,7 @@ public class SubTask : MonoBehaviour {
     public List<SubTask> priorSubTasks;
     public int amountToComplete = 1;
     public int amountCompleted = 0;
-    bool isCompleted;
+    public bool isCompleted;
     private bool runTask = true;
 	public	GameObject sound;
 	public	AudioManager AM;

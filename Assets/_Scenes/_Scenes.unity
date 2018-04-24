@@ -837,6 +837,7 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
+  isCompleted: 0
   sound: {fileID: 0}
   AM: {fileID: 0}
 --- !u!4 &89973231
@@ -2044,6 +2045,7 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
+  isCompleted: 0
   sound: {fileID: 0}
   AM: {fileID: 0}
 --- !u!1 &130265926
@@ -2094,6 +2096,7 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 4
   amountCompleted: 0
+  isCompleted: 0
   sound: {fileID: 0}
   AM: {fileID: 0}
 --- !u!1 &133254976
@@ -3051,6 +3054,7 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
+  isCompleted: 0
   sound: {fileID: 0}
   AM: {fileID: 0}
 --- !u!1 &191850095
@@ -3380,8 +3384,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b2664ab98f46d2040a6d1f26cef1d710, type: 3}
   - {fileID: 8300000, guid: 2cb31caff180fba4d8be2010bfda37c4, type: 3}
   - {fileID: 8300000, guid: 2d86b48f4c3687d48b297e2dbd9c0fd8, type: 3}
-  InteractionButton: {fileID: 1557436090}
-  PickupButton: {fileID: 1907646497}
+  InteractionButton: {fileID: 1907646497}
+  PickupButton: {fileID: 1557436090}
 --- !u!136 &192300135
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7692,12 +7696,12 @@ Prefab:
         type: 2}
       propertyPath: InteractionButton
       value: 
-      objectReference: {fileID: 1329886258}
+      objectReference: {fileID: 652305800}
     - target: {fileID: 114967127229119170, guid: 4038b4fa1e064144097fa87514044e5e,
         type: 2}
       propertyPath: PickupButton
       value: 
-      objectReference: {fileID: 652305800}
+      objectReference: {fileID: 1329886258}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4038b4fa1e064144097fa87514044e5e, type: 2}
   m_IsPrefabParent: 0
@@ -7904,12 +7908,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7debc14e0d9d4f84c99051566372f157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Sweep Floor
+  description: Mop Floor
   onCompleteObject: {fileID: 0}
   onCompleteAction: 3
   priorSubTasks: []
   amountToComplete: 3
   amountCompleted: 0
+  isCompleted: 0
   sound: {fileID: 0}
   AM: {fileID: 0}
 --- !u!4 &495146370
@@ -8460,6 +8465,7 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 3
   amountCompleted: 0
+  isCompleted: 0
   sound: {fileID: 0}
   AM: {fileID: 0}
 --- !u!1 &535107420
@@ -10995,7 +11001,7 @@ GameObject:
   - component: {fileID: 652305803}
   - component: {fileID: 652305802}
   m_Layer: 0
-  m_Name: Y
+  m_Name: X
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11845,6 +11851,7 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
+  isCompleted: 0
   sound: {fileID: 0}
   AM: {fileID: 0}
 --- !u!1 &707366757
@@ -13423,6 +13430,7 @@ MonoBehaviour:
   - {fileID: 706321969}
   amountToComplete: 1
   amountCompleted: 0
+  isCompleted: 0
   sound: {fileID: 0}
   AM: {fileID: 0}
 --- !u!1 &813267411
@@ -13483,12 +13491,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7debc14e0d9d4f84c99051566372f157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Feed the dog
+  description: Feed the dog canned food
   onCompleteObject: {fileID: 282404434}
   onCompleteAction: 0
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
+  isCompleted: 0
   sound: {fileID: 0}
   AM: {fileID: 0}
 --- !u!4 &816130986
@@ -13526,8 +13535,8 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 819830006}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 664.20654, y: 0, z: 445.57196}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1557436091}
@@ -13537,7 +13546,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 664.20654, y: -0.00000166893}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &822780577
@@ -14067,12 +14076,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7debc14e0d9d4f84c99051566372f157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Pick Up Dog Poop
+  description: Bin Dog Poop
   onCompleteObject: {fileID: 24448582}
   onCompleteAction: 1
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
+  isCompleted: 0
   sound: {fileID: 0}
   AM: {fileID: 0}
 --- !u!4 &902538981
@@ -14489,7 +14499,7 @@ GameObject:
   - component: {fileID: 916995055}
   - component: {fileID: 916995054}
   m_Layer: 0
-  m_Name: X
+  m_Name: A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19593,6 +19603,7 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
+  isCompleted: 0
   sound: {fileID: 0}
   AM: {fileID: 0}
 --- !u!1 &1057348337
@@ -23739,8 +23750,8 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1311836869}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 61.808044, y: 0, z: 404.98154}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 916995053}
@@ -23750,7 +23761,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 61.808044, y: -0.00000166893}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1315510574
@@ -24208,7 +24219,7 @@ GameObject:
   - component: {fileID: 1329886261}
   - component: {fileID: 1329886260}
   m_Layer: 0
-  m_Name: X
+  m_Name: A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26286,6 +26297,7 @@ MonoBehaviour:
   - {fileID: 2084842553}
   amountToComplete: 1
   amountCompleted: 0
+  isCompleted: 0
   sound: {fileID: 0}
   AM: {fileID: 0}
 --- !u!4 &1519405558
@@ -27200,7 +27212,7 @@ GameObject:
   - component: {fileID: 1557436093}
   - component: {fileID: 1557436092}
   m_Layer: 0
-  m_Name: X
+  m_Name: A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32118,6 +32130,7 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 4
   amountCompleted: 0
+  isCompleted: 0
   sound: {fileID: 0}
   AM: {fileID: 0}
 --- !u!1 &1658449748
@@ -32705,7 +32718,7 @@ GameObject:
   - component: {fileID: 1682962991}
   - component: {fileID: 1682962990}
   m_Layer: 0
-  m_Name: Y
+  m_Name: X
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32815,6 +32828,7 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
+  isCompleted: 0
   sound: {fileID: 0}
   AM: {fileID: 0}
 --- !u!4 &1691459101
@@ -34166,6 +34180,7 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
+  isCompleted: 0
   sound: {fileID: 0}
   AM: {fileID: 0}
 --- !u!1 &1779246833
@@ -34336,6 +34351,7 @@ MonoBehaviour:
   - {fileID: 1519405557}
   amountToComplete: 1
   amountCompleted: 0
+  isCompleted: 0
   sound: {fileID: 0}
   AM: {fileID: 0}
 --- !u!4 &1782633334
@@ -34581,8 +34597,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b2664ab98f46d2040a6d1f26cef1d710, type: 3}
   - {fileID: 8300000, guid: 2cb31caff180fba4d8be2010bfda37c4, type: 3}
   - {fileID: 8300000, guid: 2d86b48f4c3687d48b297e2dbd9c0fd8, type: 3}
-  InteractionButton: {fileID: 916995052}
-  PickupButton: {fileID: 1682962988}
+  InteractionButton: {fileID: 1682962988}
+  PickupButton: {fileID: 916995052}
 --- !u!136 &1788227378
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -36060,7 +36076,7 @@ GameObject:
   - component: {fileID: 1907646500}
   - component: {fileID: 1907646499}
   m_Layer: 0
-  m_Name: Y
+  m_Name: X
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38755,6 +38771,7 @@ MonoBehaviour:
   priorSubTasks: []
   amountToComplete: 1
   amountCompleted: 0
+  isCompleted: 0
   sound: {fileID: 0}
   AM: {fileID: 0}
 --- !u!1 &2089572447
@@ -38809,8 +38826,8 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2092240503}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 630.9963, y: 0, z: -15.682653}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1329886259}
@@ -38820,7 +38837,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 630.9963, y: -0.00000166893}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2102121463

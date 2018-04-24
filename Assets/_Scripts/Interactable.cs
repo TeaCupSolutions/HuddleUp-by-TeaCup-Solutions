@@ -123,8 +123,23 @@ public class Interactable : MonoBehaviour
                     }
                     if (distance <= radius && player.GetComponent<Player>().holding == condictionObject)
                     {
-                        player.GetComponent<Player>().InteractionButton.SetActive(true);
-                        IsShowingButton[player.GetComponent<Player>().playerNum-1] = true;
+                        bool runTask = true;
+                        if (subtask.priorSubTasks.Count != 0)
+                        {
+                            foreach (SubTask s in subtask.priorSubTasks)
+                            {
+                                if (!s.isCompleted)
+                                {
+                                    runTask = false;
+                                }
+                            }
+                        }
+
+                        if (runTask)
+                        {
+                            player.GetComponent<Player>().InteractionButton.SetActive(true);
+                            IsShowingButton[player.GetComponent<Player>().playerNum-1] = true;
+                        }
                     }
                     else
                     {

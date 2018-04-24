@@ -87,6 +87,12 @@ public class Pickupable : MonoBehaviour
                     player.GetComponent<Player>().PickupButton.SetActive(true);
                     IsShowingButton[player.GetComponent<Player>().playerNum - 1] = true;
                 }
+
+                if (distance >= radius && IsShowingButton[player.GetComponent<Player>().playerNum - 1])
+                {
+                    player.GetComponent<Player>().PickupButton.SetActive(false);
+                    IsShowingButton[player.GetComponent<Player>().playerNum - 1] = false;
+                }
             }
         }
         

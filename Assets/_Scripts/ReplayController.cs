@@ -92,6 +92,14 @@ public class ReplayController : MonoBehaviour
                     offset++;
                     anim.SetFloat("JumpLeg", (float)double.Parse(inputs[offset]));
                     offset++;
+                    anim.SetBool("Dance1", bool.Parse(inputs[offset]));
+                    offset++;
+                    anim.SetBool("Dance2", bool.Parse(inputs[offset]));
+                    offset++;
+                    anim.SetBool("Dance3", bool.Parse(inputs[offset]));
+                    offset++;
+                    anim.SetBool("Dance4", bool.Parse(inputs[offset]));
+                    offset++;
                 }
 
                 int counter = int.Parse(inputs[offset]);
@@ -117,7 +125,8 @@ public class ReplayController : MonoBehaviour
                             + player.transform.rotation.x + "|" + player.transform.rotation.y + "|" + player.transform.rotation.z + "|" 
                             + player.transform.rotation.w + "|" + player.GetComponent<ThirdPersonUserControl>().getPickupActionState() + "|" 
                             + player.GetComponent<ThirdPersonUserControl>().getInteractionActionState() + "|"
-                            + anim.GetFloat("Forward") + "|" + anim.GetFloat("Turn") + "|" + anim.GetBool("Crouch") + "|" + anim.GetBool("OnGround") + "|" + anim.GetFloat("Jump") + "|" + anim.GetFloat("JumpLeg") + "|");
+                            + anim.GetFloat("Forward") + "|" + anim.GetFloat("Turn") + "|" + anim.GetBool("Crouch") + "|" + anim.GetBool("OnGround") + "|" + anim.GetFloat("Jump") + "|" + anim.GetFloat("JumpLeg") + "|"
+                            + anim.GetBool("Dance1") + "|" + anim.GetBool("Dance2") + "|" + anim.GetBool("Dance3") + "|" + anim.GetBool("Dance3") + "|");
             }
 
             m_sw.Write(scores.Count + "|");

@@ -15,6 +15,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         public Transform m_Cam;
         private Vector3 m_CamForward;
         private Vector3 m_Move;
+        private Vector2 m_Dance;
         private bool m_Jump, m_Crouch;
         private bool m_PickupAction;
         private bool m_InteractAction;
@@ -35,6 +36,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                     // read inputs
                     float h = Input.GetAxis("P" + this.player + "_Horizontal");
                     float v = Input.GetAxis("P" + this.player + "_Vertical");
+                    m_Dance = new Vector2(Input.GetAxis("P" + this.player + "_Dance1"), Input.GetAxis("P" + this.player + "_Dance2"));
                     m_PickupAction = Input.GetButtonDown("P" + this.player + "_Pickup");
                     m_InteractAction = Input.GetButtonDown("P" + this.player + "_Interact");
                 // calculate move direction to pass to character
@@ -66,7 +68,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         // Fixed update is called in sync with physics
         private void FixedUpdate()
         {
-            m_Character.Move(m_Move, m_Crouch, m_Jump);
+            m_Character.Move(m_Move, m_Crouch, m_Jump, m_Dance);
             if (m_Jump)
             {
                 m_Jump = false;

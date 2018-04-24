@@ -1,0 +1,219 @@
+fileFormatVersion: 2
+guid: 4e402f3fb806e2d4387ac18493870b6e
+timeCreated: 1524592940
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: RokokoGu10
+    100004: RokokoGu11
+    100006: RokokoGu12
+    100008: RokokoGu13
+    100010: RokokoGu14
+    100012: RokokoGu15
+    100014: RokokoGu16
+    100016: RokokoGu17
+    100018: RokokoGu18
+    100020: RokokoGu19
+    100022: RokokoGu20
+    100024: RokokoGu21
+    100026: RokokoGu22
+    100028: RokokoGu23
+    100030: RokokoGu24
+    100032: RokokoGu25
+    100034: RokokoGu26
+    100036: RokokoGu27
+    100038: RokokoGu28
+    100040: RokokoGu29
+    100042: RokokoGu30
+    100044: RokokoGu31
+    100046: RokokoGu32
+    100048: RokokoGu33
+    100050: RokokoGu34
+    100052: RokokoGu35
+    100054: RokokoGu36
+    100056: RokokoGu37
+    100058: RokokoGu38
+    100060: RokokoGu39
+    100062: RokokoGu40
+    100064: RokokoGu41
+    100066: RokokoGu42
+    100068: RokokoGu43
+    100070: RokokoGu44
+    100072: RokokoGu45
+    100074: RokokoGu46
+    100076: RokokoGu47
+    100078: RokokoGu48
+    100080: RokokoGu49
+    100082: RokokoGu50
+    100084: RokokoGu51
+    100086: RokokoGu52
+    100088: RokokoGu53
+    100090: RokokoGu54
+    100092: RokokoGu55
+    100094: RokokoGu56
+    100096: RokokoGu57
+    100098: RokokoGu58
+    100100: RokokoGu59
+    100102: RokokoGu60
+    100104: RokokoGu61
+    100106: RokokoGu62
+    100108: RokokoGu63
+    100110: RokokoGu64
+    100112: RokokoGu65
+    100114: RokokoGuy0
+    100116: RokokoGuy1
+    100118: RokokoGuy2
+    100120: RokokoGuy3
+    100122: RokokoGuy4
+    100124: RokokoGuy5
+    100126: RokokoGuy6
+    100128: RokokoGuy7
+    100130: RokokoGuy8
+    100132: RokokoGuy9
+    400000: //RootNode
+    400002: RokokoGu10
+    400004: RokokoGu11
+    400006: RokokoGu12
+    400008: RokokoGu13
+    400010: RokokoGu14
+    400012: RokokoGu15
+    400014: RokokoGu16
+    400016: RokokoGu17
+    400018: RokokoGu18
+    400020: RokokoGu19
+    400022: RokokoGu20
+    400024: RokokoGu21
+    400026: RokokoGu22
+    400028: RokokoGu23
+    400030: RokokoGu24
+    400032: RokokoGu25
+    400034: RokokoGu26
+    400036: RokokoGu27
+    400038: RokokoGu28
+    400040: RokokoGu29
+    400042: RokokoGu30
+    400044: RokokoGu31
+    400046: RokokoGu32
+    400048: RokokoGu33
+    400050: RokokoGu34
+    400052: RokokoGu35
+    400054: RokokoGu36
+    400056: RokokoGu37
+    400058: RokokoGu38
+    400060: RokokoGu39
+    400062: RokokoGu40
+    400064: RokokoGu41
+    400066: RokokoGu42
+    400068: RokokoGu43
+    400070: RokokoGu44
+    400072: RokokoGu45
+    400074: RokokoGu46
+    400076: RokokoGu47
+    400078: RokokoGu48
+    400080: RokokoGu49
+    400082: RokokoGu50
+    400084: RokokoGu51
+    400086: RokokoGu52
+    400088: RokokoGu53
+    400090: RokokoGu54
+    400092: RokokoGu55
+    400094: RokokoGu56
+    400096: RokokoGu57
+    400098: RokokoGu58
+    400100: RokokoGu59
+    400102: RokokoGu60
+    400104: RokokoGu61
+    400106: RokokoGu62
+    400108: RokokoGu63
+    400110: RokokoGu64
+    400112: RokokoGu65
+    400114: RokokoGuy0
+    400116: RokokoGuy1
+    400118: RokokoGuy2
+    400120: RokokoGuy3
+    400122: RokokoGuy4
+    400124: RokokoGuy5
+    400126: RokokoGuy6
+    400128: RokokoGuy7
+    400130: RokokoGuy8
+    400132: RokokoGuy9
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

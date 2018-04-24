@@ -28,6 +28,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		Vector3 m_CapsuleCenter;
 		CapsuleCollider m_Capsule;
 		bool m_Crouching;
+        Vector2 Dances;
 
 
 		void Start()
@@ -75,8 +76,40 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			UpdateAnimator(move);
 		}
 
+        public void Move(Vector3 move, bool crouch, bool jump, Vector2 dances)
+        {
 
-		void ScaleCapsuleForCrouching(bool crouch)
+            // convert the world relative moveInput vector into a local-relative
+            // turn amount and forward amount required to head in the desired
+            // direction.
+            if (move.magnitude > 1f) move.Normalize();
+            move = transform.InverseTransformDirection(move);
+            CheckGroundStatus();
+            move = Vector3.ProjectOnPlane(move, m_GroundNormal);
+            m_TurnAmount = Mathf.Atan2(move.x, move.z);
+            m_ForwardAmount = move.z;
+            Dances = dances;
+
+            ApplyExtraTurnRotation();
+
+            // control and velocity handling is different when grounded and airborne:
+            if (m_IsGrounded)
+            {
+                HandleGroundedMovement(crouch, jump);
+            }
+            else
+            {
+                HandleAirborneMovement();
+            }
+
+            ScaleCapsuleForCrouching(crouch);
+            PreventStandingInLowHeadroom();
+
+            // send input and other state parameters to the animator
+            UpdateAnimator(move);
+        }
+
+        void ScaleCapsuleForCrouching(bool crouch)
 		{
 			if (m_IsGrounded && crouch)
 			{
@@ -122,10 +155,49 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			m_Animator.SetFloat("Turn", m_TurnAmount, 0.1f, Time.deltaTime);
 			m_Animator.SetBool("Crouch", m_Crouching);
 			m_Animator.SetBool("OnGround", m_IsGrounded);
-			if (!m_IsGrounded)
+
+            if (m_ForwardAmount == 0)
+            {
+                if (Dances.x > 0)
+                {
+                    m_Animator.SetBool("Dance1", true);
+                }
+                else if (Dances.x < 0)
+                {
+                    m_Animator.SetBool("Dance2", true);
+                }
+                else
+                {
+                    m_Animator.SetBool("Dance1", false);
+                    m_Animator.SetBool("Dance2", false);
+                }
+
+                if (Dances.y > 0)
+                {
+                    m_Animator.SetBool("Dance3", true);
+                }
+                else if (Dances.y < 0)
+                {
+                    m_Animator.SetBool("Dance4", true);
+                }
+                else
+                {
+                    m_Animator.SetBool("Dance3", false);
+                    m_Animator.SetBool("Dance4", false);
+                }
+            } else
+            {
+                m_Animator.SetBool("Dance1", false);
+                m_Animator.SetBool("Dance2", false);
+                m_Animator.SetBool("Dance3", false);
+                m_Animator.SetBool("Dance4", false);
+            }
+            
+            if (!m_IsGrounded)
 			{
 				m_Animator.SetFloat("Jump", m_Rigidbody.velocity.y);
 			}
+
 
 			// calculate which leg is behind, so as to leave that leg trailing in the jump animation
 			// (This code is reliant on the specific run cycle offset in our animations,

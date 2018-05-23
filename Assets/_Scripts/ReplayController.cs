@@ -126,7 +126,7 @@ public class ReplayController : MonoBehaviour
                             + player.transform.rotation.w + "|" + player.GetComponent<ThirdPersonUserControl>().getPickupActionState() + "|" 
                             + player.GetComponent<ThirdPersonUserControl>().getInteractionActionState() + "|"
                             + anim.GetFloat("Forward") + "|" + anim.GetFloat("Turn") + "|" + anim.GetBool("Crouch") + "|" + anim.GetBool("OnGround") + "|" + anim.GetFloat("Jump") + "|" + anim.GetFloat("JumpLeg") + "|"
-                            + anim.GetBool("Dance1") + "|" + anim.GetBool("Dance2") + "|" + anim.GetBool("Dance3") + "|" + anim.GetBool("Dance3") + "|");
+                            + anim.GetBool("Dance1") + "|" + anim.GetBool("Dance2") + "|" + anim.GetBool("Dance3") + "|" + anim.GetBool("Dance4") + "|");
             }
 
             m_sw.Write(scores.Count + "|");
